@@ -15,7 +15,11 @@
         <s-link href="/templates">Templates</s-link>
         <s-link href="/settings">Settings</s-link>
     </s-app-nav>
-
+    <s-page heading="Page Title">
+        <s-button slot="primary-action" onclick="shopify.toast.show('Save')">Save</s-button>
+        <s-button slot="secondary-actions" onclick="shopify.toast.show('Cancel')">Cancel</s-button>
+        <s-link slot="breadcrumb-actions" href="/">Home</s-link>
+    </s-page>
     <s-box padding="base" background="subdued" border="base" borderRadius="base">
         Welcome to Uniweb Custom App
         <s-button id="open-picker" variant="primary">Add Product</s-button>
