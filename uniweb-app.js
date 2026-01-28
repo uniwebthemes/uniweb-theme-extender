@@ -44,8 +44,8 @@
         variables: { ownerType: "SHOP", first: 1 },
       }),
     });
-    const { metafieldData } = await metafieldRes.json();
-    document.getElementById("product-title").innerText = metafieldData.metafieldDefinitions.nodes.id;
+    const { data } = await metafieldRes.json();
+    document.getElementById("product-title").innerText = data.metafieldDefinitions.nodes.id;
     });
 
   const ctx = document.getElementById("myChart");
