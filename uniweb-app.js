@@ -7,7 +7,7 @@
   document
     .getElementById("product--picker")
     .addEventListener("click", async () => {
-      /*const res = await fetch("shopify:admin/api/2026-01/graphql.json", {
+      /*const res = await fetch("shopify:admin/api/2025-10/graphql.json", {
         method: "POST",
         body: JSON.stringify({
           query: `
@@ -25,7 +25,7 @@
       document.getElementById("product-title").innerText = data.product.title;*/
 
       // Metafield
-      const metafieldRes = await fetch("shopify:admin/api/2026-01/graphql.json", {
+      const metafieldRes = await fetch("shopify:admin/api/2025-10/graphql.json", {
       method: "POST",
       body: JSON.stringify({
         query: `MetafieldDefinitions($ownerType: MetafieldOwnerType!, $first: Int) {
@@ -42,7 +42,7 @@
         }
       }
     `,
-        variables: { "ownerType": "SHOP", "first": 1 },
+        variables: { ownerType: "SHOP", first: 1 },
       }),
     });
     const { data } = await metafieldRes.json();
