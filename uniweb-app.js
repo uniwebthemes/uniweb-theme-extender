@@ -45,7 +45,7 @@
       }),
     });
     const { data } = await metafieldRes.json();
-    document.getElementById("product-title").innerText = data.metafieldDefinitions.nodes[0].name;
+    document.getElementById("product-title").innerText = data;
     });
 
   const ctx = document.getElementById("myChart");
