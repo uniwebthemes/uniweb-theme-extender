@@ -7,7 +7,7 @@
   document
     .getElementById("product--picker")
     .addEventListener("click", async () => {
-      const res = await fetch("shopify:admin/api/2026-01/graphql.json", {
+      /*const res = await fetch("shopify:admin/api/2026-01/graphql.json", {
         method: "POST",
         body: JSON.stringify({
           query: `
@@ -22,7 +22,7 @@
       });
 
       const { data } = await res.json();
-      document.getElementById("product-title").innerText = data.product.title;
+      document.getElementById("product-title").innerText = data.product.title;*/
 
       // Metafield
       const metafieldRes = await fetch("shopify:admin/api/2026-01/graphql.json", {
