@@ -30,7 +30,7 @@
       body: JSON.stringify({
         query: `
         query MetafieldDefinitions($ownerType: MetafieldOwnerType!, $first: Int) {
-        metafieldDefinitions(key: \"insaccesstoken\", ownerType: $ownerType, first: $first) {
+        metafieldDefinitions(key: "insaccesstoken", ownerType: $ownerType, first: $first) {
           nodes {
             id
             name
@@ -47,7 +47,7 @@
       }),
     });
     const { data } = await metafieldRes.json();
-    document.getElementById("product-title").innerText = data;
+    document.getElementById("product-title").innerText = data.metafieldDefinitions.nodes[0].name;
     });
 
   const ctx = document.getElementById("myChart");
