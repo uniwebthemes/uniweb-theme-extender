@@ -28,7 +28,8 @@
       const metafieldRes = await fetch("shopify:admin/api/2025-10/graphql.json", {
       method: "POST",
       body: JSON.stringify({
-        query: `MetafieldDefinitions($ownerType: MetafieldOwnerType!, $first: Int) {
+        query: `
+        query MetafieldDefinitions($ownerType: MetafieldOwnerType!, $first: Int) {
         metafieldDefinitions(key: \"insaccesstoken\", ownerType: $ownerType, first: $first) {
           nodes {
             id
