@@ -3,24 +3,7 @@
   const selected = await shopify.resourcePicker({ type: "product" });
   console.log(selected);
 });*/
-  async function checkInstagramAccessTokenMetafield() {
-    const res = await fetch("shopify:admin/api/2026-01/graphql.json", {
-      method: "POST",
-      body: JSON.stringify({
-        query: `
-      query metafieldDefinition($id: ID!) {
-        product(id: $id) {
-          id
-        }
-      }
-    `,
-        variables: { id: "gid://shopify/Product/8966805422326" },
-      }),
-    });
-    const dataProduct = "";
-    const { data } = await res.json();
-    return data.product.title;
-  }
+    
   document
     .getElementById("product--picker")
     .addEventListener("click", async () => {
@@ -40,6 +23,29 @@
 
       const { data } = await res.json();
       document.getElementById("product-title").innerText = data.product.title;
+
+      // Metafield
+      const metafieldRes = await fetch("shopify:admin/api/2026-01/graphql.json", {
+      method: "POST",
+      body: JSON.stringify({
+        query: `
+        metafieldDefinitions(key: "insaccesstoken", ownerType: $ownerType, first: $first) {
+          nodes {
+            id
+            name
+            namespace
+            key
+            type {
+              name
+            }
+          }
+        }
+    `,
+        variables: { ownerType: "SHOP", first: 1 },
+      }),
+    });
+    const { metafieldData } = await metafieldRes.json();
+    document.getElementById("product-title").innerText = metafieldData.metafieldDefinitions.nodes.id;
     });
 
   const ctx = document.getElementById("myChart");
