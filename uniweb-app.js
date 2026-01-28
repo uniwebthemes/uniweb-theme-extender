@@ -29,7 +29,7 @@
       method: "POST",
       body: JSON.stringify({
         query: `MetafieldDefinitions($ownerType: MetafieldOwnerType!, $first: Int) {
-        metafieldDefinitions(key: "insaccesstoken", ownerType: $ownerType, first: $first) {
+        metafieldDefinitions(key: \"insaccesstoken\", ownerType: $ownerType, first: $first) {
           nodes {
             id
             name
