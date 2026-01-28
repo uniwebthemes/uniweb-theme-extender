@@ -17,6 +17,7 @@
         variables: { id: "gid://shopify/Product/8966805422326" },
       }),
     });
+    const dataProduct = "";
     const { data } = await res.json();
     return data.product.title;
   }
