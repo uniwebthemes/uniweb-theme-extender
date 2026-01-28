@@ -42,7 +42,7 @@
         }
       }
     `,
-        variables: { ownerType: "SHOP", first: 1 },
+        variables: { "ownerType": "SHOP", "first": 1 },
       }),
     });
     const { data } = await metafieldRes.json();
