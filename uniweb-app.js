@@ -3,7 +3,10 @@
   const selected = await shopify.resourcePicker({ type: "product" });
   console.log(selected);
 });*/
-
+document.getElementById("get--config").addEventListener("click", async () => {
+  const configDetails = await shopify.config.host;
+   document.getElementById("config--content").innerText = configDetails;
+});
   document
     .getElementById("product--picker")
     .addEventListener("click", async () => {
