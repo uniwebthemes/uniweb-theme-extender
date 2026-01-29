@@ -3,7 +3,7 @@
   const selected = await shopify.resourcePicker({ type: "product" });
   console.log(selected);
 });*/
-    
+
   document
     .getElementById("product--picker")
     .addEventListener("click", async () => {
@@ -25,10 +25,12 @@
       document.getElementById("product-title").innerText = data.product.title;*/
 
       // Metafield
-      const metafieldRes = await fetch("shopify:admin/api/2025-10/graphql.json", {
-      method: "POST",
-      body: JSON.stringify({
-        query: `
+      const metafieldRes = await fetch(
+        "shopify:admin/api/2025-10/graphql.json",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            query: `
         query MetafieldDefinitions($ownerType: MetafieldOwnerType!, $first: Int) {
         metafieldDefinitions(key: "insaccesstoken", ownerType: $ownerType, first: $first) {
           nodes {
@@ -43,11 +45,61 @@
         }
       }
     `,
-        variables: { ownerType: "SHOP", first: 1 },
-      }),
+            variables: { ownerType: "SHOP", first: 1 },
+          }),
+        },
+      );
+      const { data } = await metafieldRes.json();
+      document.getElementById("product-title").innerText =
+        data.metafieldDefinitions.nodes[0].name;
     });
-    const { data } = await metafieldRes.json();
-    document.getElementById("product-title").innerText = data.metafieldDefinitions.nodes[0].name;
+
+  document
+    .getElementById("metafield--creator")
+    .addEventListener("click", async () => {
+      // Metafield
+      const metafieldRes = await fetch(
+        "shopify:admin/api/2025-10/graphql.json",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            query: `
+              mutation CreateMetafieldDefinition($definition: MetafieldDefinitionInput!) {
+                metafieldDefinitionCreate(definition: $definition) {
+                  createdDefinition {
+                    id
+                    namespace
+                    access {
+                      admin
+                    }
+                  }
+                  userErrors {
+                    field
+                    message
+                    code
+                  }
+                }
+              }  
+              `,
+             variables: {
+              definition: {
+                name: "Instagram Access Token",
+                namespace: "$app:uniwebtesting",
+                key: "uniweb_insaccesstoken_testing",
+                type: "single_line_text_field",
+                description: "The instagram Access Token",
+                ownerType: "SHOP",
+                access: {
+                  admin: "MERCHANT_READ",
+                },
+              },
+            },
+          }),
+        },
+      );
+      const { data } = await metafieldRes.json();
+      document.getElementById("metafield-content").innerText =
+        data.metafieldDefinitionCreate.createdDefinition.id;
     });
 
   const ctx = document.getElementById("myChart");
