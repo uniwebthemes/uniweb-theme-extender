@@ -3,10 +3,19 @@
   const selected = await shopify.resourcePicker({ type: "product" });
   console.log(selected);
 });*/
-document.getElementById("get--config").addEventListener("click", async () => {
-  const configDetails = await shopify.config.host;
-   document.getElementById("config--content").innerText = configDetails;
-});
+  document.getElementById("get--config").addEventListener("click", async () => {
+    const configDetails = await shopify.config.shop;
+    document.getElementById("config--content").innerText = configDetails;
+  });
+  const params = new URLSearchParams(window.location.search);
+
+  const shopifyKey = params.get("shopify_key");
+  document.getElementById("shopify--key").innerText = shopifyKey;
+
+  const _meta = document.querySelector('meta[name="shopify-api-key"]');
+  if (_meta) {
+    _meta.setAttribute("content", shopifyKey);
+  }
   document
     .getElementById("product--picker")
     .addEventListener("click", async () => {
