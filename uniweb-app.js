@@ -81,7 +81,7 @@
                 }
               }  
               `,
-             variables: {
+            variables: {
               definition: {
                 name: "Instagram Access Token",
                 namespace: "$app:uniwebtesting",
@@ -100,6 +100,45 @@
       const { data } = await metafieldRes.json();
       document.getElementById("metafield-content").innerText =
         data.metafieldDefinitionCreate.createdDefinition.id;
+    });
+
+  document
+    .getElementById("metafield--get-button")
+    .addEventListener("click", async () => {
+      // Metafield
+      const metafieldRes = await fetch(
+        "shopify:admin/api/2025-10/graphql.json",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            query: `
+              query MetafieldDefinitions($ownerType: MetafieldOwnerType!, $first: Int) {
+                metafieldDefinitions(namespace:"app--315130609665--uniwebtesting", key: "uniweb_insaccesstoken_testing", ownerType: $ownerType, first: $first) {
+                  nodes {
+                    id
+                    name
+                    namespace
+                    key
+                    type {
+                      name
+                    }
+                    access {
+                      admin
+                    }
+                  }
+                }
+              } 
+              `,
+            variables: {
+              ownerType: "SHOP",
+              first: 1,
+            },
+          }),
+        },
+      );
+      const { data } = await metafieldRes.json();
+      document.getElementById("metafield-get").innerText =
+        data.metafieldDefinitions.nodes[0].id;
     });
 
   const ctx = document.getElementById("myChart");
