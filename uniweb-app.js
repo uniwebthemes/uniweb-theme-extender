@@ -19,7 +19,10 @@
     const configDetailsappOrigins = await shopify.config.appOrigins;
     document.getElementById("config--appOrigins").innerText = configDetailsappOrigins;
   });
-  
+   document.getElementById("get--config-idToken").addEventListener("click", async () => {
+    const configDetailsidToken = await shopify.idToken();
+    document.getElementById("config--idToken").innerText = configDetailsidToken;
+  });
 
   const currentURL = window.location.href
   document.getElementById("config--URL").innerText = currentURL;
