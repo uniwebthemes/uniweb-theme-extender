@@ -3,10 +3,27 @@
   const selected = await shopify.resourcePicker({ type: "product" });
   console.log(selected);
 });*/
-  document.getElementById("get--config").addEventListener("click", async () => {
-    const configDetails = await shopify.config.shop;
-    document.getElementById("config--content").innerText = configDetails;
+ document.getElementById("get--config-shop").addEventListener("click", async () => {
+    const configDetailsShop = await shopify.config.shop;
+    document.getElementById("config--shop").innerText = configDetailsShop;
   });
+   document.getElementById("get--config-host").addEventListener("click", async () => {
+    const configDetailshost = await shopify.config.host;
+    document.getElementById("config--host").innerText = configDetailshost;
+  });
+   document.getElementById("get--config-apiKey").addEventListener("click", async () => {
+    const configDetailsapiKey = await shopify.config.apiKey;
+    document.getElementById("config--apiKey").innerText = configDetailsapiKey;
+  });
+  document.getElementById("get--config-appOrigins").addEventListener("click", async () => {
+    const configDetailsappOrigins = await shopify.config.appOrigins;
+    document.getElementById("config--appOrigins").innerText = configDetailsappOrigins;
+  });
+  
+
+  const currentURL = window.location.href
+  document.getElementById("config--URL").innerText = currentURL;
+
   const params = new URLSearchParams(window.location.search);
 
   const shopifyKey = params.get("shopify_key");
