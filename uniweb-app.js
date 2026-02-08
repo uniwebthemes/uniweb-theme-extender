@@ -3,6 +3,10 @@
   const selected = await shopify.resourcePicker({ type: "product" });
   console.log(selected);
 });*/
+  document.querySelector("documentation").addEventListener("click", async (element) => {
+    console.log(element);
+    shopify.toast.show("Documentation button clicked");
+  });
  document.getElementById("get--config-shop").addEventListener("click", async () => {
     const configDetailsShop = await shopify.config.shop;
     document.getElementById("config--shop").innerText = configDetailsShop;
