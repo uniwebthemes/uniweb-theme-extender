@@ -25,7 +25,7 @@
   });
 
   const currentURL = window.location.href
-  document.getElementById("config--URL").innerText = currentURL;
+  //document.getElementById("config--URL").innerText = currentURL;
 
   const params = new URLSearchParams(window.location.search);
 

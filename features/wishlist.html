@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Uniweb Theme Extender</title>
+    <title>Wishlist - Uniweb Theme Extender</title>
     <meta name="shopify-api-key" content="" />
     <link rel="stylesheet" href="uniweb-app.css">
     <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
@@ -16,45 +16,22 @@
         <s-link href="https://uniwebthemes.github.io/uniweb-theme-extender/templates">Templates</s-link>
         <s-link href="https://uniwebthemes.github.io/uniweb-theme-extender/settings">Settings</s-link>
     </s-app-nav>
-    <s-page heading="Uniweb Theme Extender Pack">
+    <s-page heading="Wishlist Feature" title="Wishlist Feature">
         <s-stack gap="base">
             <s-text></s-text>
-            <s-banner heading="Welcome to Uniweb Theme Extender Pack">
-                <s-paragraph>Our theme extension pack comes with 100s of features you need to run, grow your online
-                    store. </s-paragraph>
+            <s-banner heading="Wishlist - Use at your own risk" tone="warning" variant="warning"
+                onClick="window.puzzleApp.handleBannerClick()">
+                <s-paragraph>
+                    This feature requires <s-link href="javascript:void(0)" target="_blank">Shopify Forms</s-link>
+                    and <s-link href="javascript:void(0)" target="_blank">
+                        Shopify Flow</s-link> apps from Shopify. If Shopify decides to make this feature or these apps
+                    unavailable, this feature will no longer work.
+                </s-paragraph>
             </s-banner>
-            <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base">
-                <s-paragraph id="shopify--key">Product information</s-paragraph>
-            </s-box>
-            <s-text>Third item</s-text>
-            <s-heading id="config--URL">URL</s-heading>
             <s-text></s-text>
-            <s-box padding="base" background="subdued" border="base" borderRadius="base">
-                <s-heading id="config--shop">Config Shop</s-heading>
-                <s-button id="get--config-shop" variant="primary">Get shop</s-button>
-                <s-heading id="config--host">Config Host</s-heading>
-                <s-button id="get--config-host" variant="primary">Get host</s-button>
-                <s-heading id="config--apiKey">Config apiKey</s-heading>
-                <s-button id="get--config-apiKey" variant="primary">Get apiKey</s-button>
-                <s-heading id="config--appOrigins">Config appOrigins</s-heading>
-                <s-button id="get--config-appOrigins" variant="primary">Get appOrigins</s-button>
-                <s-heading id="config--idToken">Config idToken</s-heading>
-                <s-button id="get--config-idToken" variant="primary">Get idToken</s-button>
-            </s-box>
 
-            <s-box padding="base" background="subdued" border="base" borderRadius="base">
-                <s-heading id="product-title">Product Title</s-heading>
-                <s-button id="product--picker" variant="primary">Select Product</s-button>
-            </s-box>
-            <s-text></s-text>
-            <s-box padding="base" background="subdued" border="base" borderRadius="base">
-                <s-heading id="metafield-content">Metafield</s-heading>
-                <s-button id="metafield--creator" variant="primary">Create Metafield</s-button>
-            </s-box>
-            <s-box padding="base" background="subdued" border="base" borderRadius="base">
-                <s-heading id="metafield-get">Get Metafield</s-heading>
-                <s-button id="metafield--get-button" variant="primary">Get Metafield</s-button>
-            </s-box>
+
+
         </s-stack>
 
         <s-stack alignItems="center">
@@ -74,10 +51,7 @@
         <!-- Use banners sparingly. Only one banner should be visible at a time. -->
         <!-- If dismissed, use local storage or a database entry to avoid showing this section again to the same user. -->
         <!-- === -->
-        <s-banner id="upgrade-banner" dismissible onDismiss="window.puzzleApp.dismissBanner(this)">
-            3 of 5 puzzles created.
-            <s-link href="#">Upgrade to Puzzlify Pro</s-link> to create unlimited puzzles.
-        </s-banner>
+
         <!-- === -->
         <!-- Setup Guide -->
         <!-- Keep instructions brief and direct. Only ask merchants for required information. -->
@@ -281,7 +255,7 @@
             <s-grid gridTemplateColumns="repeat(auto-fit, minmax(155px, 1fr))" gap="base">
                 <!-- Featured template 1 -->
                 <s-box border="base" borderRadius="base" overflow="hidden">
-                    <s-clickable href="/features/wishlist" accessibilityLabel="4-pieces puzzle template">
+                    <s-clickable href="/puzzles/4-piece" accessibilityLabel="4-pieces puzzle template">
                         <s-image aspectRatio="1/1" objectFit="cover" alt="4-pieces puzzle template"
                             src="/assets/wishlist.jpg"></s-image>
                     </s-clickable>
@@ -289,14 +263,14 @@
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
                         alignItems="center">
                         <s-heading>Wishlist</s-heading>
-                        <s-button href="/features/wishlist" accessibilityLabel="View 4-pieces puzzle template">
+                        <s-button href="/puzzles/4-piece" accessibilityLabel="View 4-pieces puzzle template">
                             View
                         </s-button>
                     </s-grid>
                 </s-box>
                 <!-- Featured template 2 -->
                 <s-box border="base" borderRadius="base" background="transparent" overflow="hidden">
-                    <s-clickable href="/features/persistent-cart" accessibilityLabel="9-pieces puzzle template">
+                    <s-clickable href="/puzzles/9-piece" accessibilityLabel="9-pieces puzzle template">
                         <s-image aspectRatio="1/1" objectFit="cover" alt="9-pieces puzzle template"
                             src="/assets/persistent-cart.jpg"></s-image>
                     </s-clickable>
@@ -304,7 +278,7 @@
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
                         alignItems="center">
                         <s-heading>Persistent Cart</s-heading>
-                        <s-button href="/features/persistent-cart" accessibilityLabel="View 9-pieces puzzle template">
+                        <s-button href="/puzzles/9-piece" accessibilityLabel="View 9-pieces puzzle template">
                             View
                         </s-button>
                     </s-grid>
