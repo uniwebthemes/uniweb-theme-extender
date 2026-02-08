@@ -3,9 +3,22 @@
   const selected = await shopify.resourcePicker({ type: "product" });
   console.log(selected);
 });*/
-  document.querySelector("documentation").addEventListener("click", async (element) => {
-    console.log(element);
-    shopify.toast.show("Documentation button clicked");
+// Array of JSON urls
+const users = [
+  { name: "documentation wishlist", url: "https://uniwebthemes.com/" },
+  { name: "Bob", url: "" },
+  { name: "Charlie", url: "" }
+];
+
+
+
+const documentations = document.querySelectorAll('.documentation');
+
+  documentations.forEach((doc) => {
+    doc.addEventListener("click", async (element) => {
+      const _url = doc.getAttribute("data-url");
+      window.open(_url, "_blank");
+    });
   });
  document.getElementById("get--config-shop").addEventListener("click", async () => {
     const configDetailsShop = await shopify.config.shop;
