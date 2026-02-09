@@ -8,7 +8,7 @@
 
   const params = new URLSearchParams(window.location.search);
   const shopifyKey = params.get("shopify_key");
-
+  console.log(currentURL);
   // Array of JSON urls
   const users = [
     { name: "documentation wishlist", url: "https://uniwebthemes.com/" },
@@ -21,10 +21,8 @@
     const _allurls = document.querySelectorAll(".nav-button");
     _allurls.forEach((doc) => {
       doc.addEventListener("click", async (element) => {
-        console.log(doc);
         const _url = doc.getAttribute("data-url");
         const _urlhref = doc.getAttribute("href");
-        console.log(_urlhref);
         let _newurl = _url + "?v=" + Date.now();
         let _newurlhref = _url + "?v=" + Date.now();
         doc.setAttribute("data-url", _newurl);
