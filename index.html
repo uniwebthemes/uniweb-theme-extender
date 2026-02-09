@@ -28,10 +28,10 @@
     <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
         <s-stack gap="base">
             <s-text></s-text>
-            <s-banner heading="Welcome to Uniweb Theme Extender" tone="info">
+            <!--<s-banner heading="Welcome to Uniweb Theme Extender" tone="info">
                 <s-paragraph>Our theme extender comes with 100s of features you need to run, grow your online
                     store. </s-paragraph>
-            </s-banner>
+            </s-banner>-->
             <s-text></s-text>
             <s-text></s-text>
             <!--<s-box padding="base" background="subdued" border="base" borderRadius="base">
@@ -56,13 +56,11 @@
                         src="/assets/wishlist.jpg"></s-image>
                 </s-clickable>
                 <s-divider></s-divider>
-                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
-                    alignItems="center">
+                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small" alignItems="center">
                     <s-heading>Wishlist</s-heading>
-                    <s-button class="nav-button pointer-events-none" href="/features/wishlist"
-                        accessibilityLabel="View wishlist feature">
-                        View
-                    </s-button>
+                    <s-button variant="secondary" href="/features/wishlist"
+                        accessibilityLabel="Wishlist Feature">
+                        View</s-button>
                 </s-grid>
             </s-box>
             <!-- Featured template 2 -->
@@ -73,13 +71,13 @@
                         src="/assets/persistent-cart.jpg"></s-image>
                 </s-clickable>
                 <s-divider></s-divider>
-                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
-                    alignItems="center">
+                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small" alignItems="center">
                     <s-heading>Persistent Cart</s-heading>
-                    <s-button class="nav-button pointer-events-none" href="/features/persistent-cart"
-                        accessibilityLabel="View persistent cart feature">
-                        View
-                    </s-button>
+                    <s-stack>
+                        <s-button variant="secondary" href="/features/persistent-cart"
+                            accessibilityLabel="Persistent Cart Feature">
+                            View</s-button>
+                    </s-stack>
                 </s-grid>
             </s-box>
             <!-- Featured template 3 -->
@@ -146,7 +144,7 @@
 
 
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
-    <script src="uniweb-app.js?v=0.0.44" defer></script>
+    <script src="uniweb-app.js?v=0.0.43" defer></script>
 
 </body>
 
