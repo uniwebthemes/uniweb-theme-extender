@@ -16,7 +16,7 @@
     { name: "Charlie", url: "" },
   ];
 
-  const documentations = document.querySelectorAll(".documentation");
+  const documentations = document.querySelectorAll(".nav-button");
 
   documentations.forEach((doc) => {
     doc.addEventListener("click", async (element) => {
@@ -24,7 +24,41 @@
       window.open(_url, "_blank");
     });
   });
- /* document.getElementById("get--config-host").addEventListener("click", async () => {
+  // Update urls on page load
+  function updateURLs() {
+    const _allurls = document.querySelectorAll(".nav-button");
+
+    _allurls.forEach((doc) => {
+      doc.addEventListener("click", async (element) => {
+        console.log(doc);
+        const _url = doc.getAttribute("data-url");
+        const _urlhref = doc.getAttribute("href");
+        console.log(_urlhref);
+        let _newurl = _url + "?v=" + Date.now();
+        let _newurlhref = _url + "?v=" + Date.now();
+        doc.setAttribute("data-url", _newurl);
+        doc.setAttribute("href", _newurlhref);
+      });
+    });
+  }
+  // Hide App loader and show app content
+  function apploaderAnimation() {
+    const appLoader = document.getElementById("app-loader");
+    const appContent = document.getElementById("app-content");
+    if (appLoader && appContent) {
+      appLoader.classList.add("hidden");
+      appContent.classList.remove("hidden");
+    }
+  }
+  /**** Update urls ****/
+  document.addEventListener("DOMContentLoaded", (event) => {
+    // Update urls on page load
+    updateURLs();
+    // Hide App loader and show app content
+    apploaderAnimation();
+  });
+
+  /* document.getElementById("get--config-host").addEventListener("click", async () => {
     const configDetailsShop = await shopify.config.host;
     document.getElementById("config--host").innerText = configDetailsShop;
   });*/
@@ -136,7 +170,7 @@
         data.metafieldDefinitionCreate.createdDefinition.id;
     });*/
 
-  document
+  /*document
     .getElementById("metafield--get-button")
     .addEventListener("click", async () => {
       // Metafield
@@ -173,7 +207,7 @@
       const { data } = await metafieldRes.json();
       document.getElementById("metafield-get").innerText =
         data.metafieldDefinitions.nodes[0].id;
-    });
+    });*/
 
   /**** Chart.js ****/
   /*const ctx = document.getElementById("myChart");

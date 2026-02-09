@@ -1,16 +1,42 @@
+.hidden {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+    display: contents;
+    transition: opacity 0.5s ease-in-out;
+}
+.visually-hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.visually-show {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
 s-section {
     padding: 20px;
     margin: 20px;
 }
+
 h1 {
     font-size: 20px;
     margin-bottom: 30px;
 }
+
 h2 {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
 h3 {
     font-size: 16px;
     margin-bottom: 10px;
+}
+
+.nav-button {
+    pointer-events: none;
 }
