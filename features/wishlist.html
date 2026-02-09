@@ -12,40 +12,30 @@
 
 <body>
     <s-page heading="Wishlist Feature" title="Wishlist Feature">
-        <s-stack gap="base">
+        <s-grid gap="small">
             <s-clickable-chip href="/" color="strong" accessibilityLabel="Remove status filter">
                 <s-icon slot="graphic" type="home"></s-icon>
                 Go Dashboard
             </s-clickable-chip>
+            <s-section padding="small">
+                <s-box>
+                    <s-section>
+                        <s-switch label="Enable feature"
+                            details="Ensure all criteria are met before enabling"></s-switch>
+                    </s-section>
+                </s-box>
+            </s-section>
             <s-banner heading="Wishlist feature requires following apps to work properly:" status="warning">
                 <s-stack direction="inline" gap="large-100">
                     <s-badge tone="warning">Shopify Forms</s-badge>
                     <s-badge tone="warning">Shopify Flow</s-badge>
                 </s-stack>
             </s-banner>
-
-            <s-section gap="base">
-                <s-stack gap="base">
-
-                    <s-paragraph>
-                        The Wishlist feature allows customers to save their favorite products for later. This can help
-                        increase customer engagement and encourage repeat visits to your store. Customers can easily add
-                        products to their wishlist and view them at any time.
-                    </s-paragraph>
-                    <s-paragraph>
-                        With the Wishlist feature, you can also send personalized marketing emails to customers based on
-                        the
-                        products they have added to their wishlist, helping to drive sales and increase customer
-                        loyalty.
-                    </s-paragraph>
-                </s-stack>
-            </s-section>
-        </s-stack>
-
+        </s-grid>
         <s-text>Need help? Visit our <s-link href="https://uniwebthemes.github.io/uniweb-theme-extender/support"
                 target="_blank">Support Center</s-link>.</s-text>
     </s-page>
-    <script src="../uniweb-app.js?v=0.0.46" defer></script>
+    <script src="../uniweb-app.js?v=0.0.47" defer></script>
 
 </body>
 
