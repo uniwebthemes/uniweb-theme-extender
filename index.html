@@ -47,57 +47,66 @@
         <!-- === -->
         <!-- Features -->
         <!-- === -->
-        <s-grid gridTemplateColumns="repeat(auto-fit, minmax(155px, 1fr))" gap="base">
-            <!-- Featured template 1 -->
-            <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
-                overflow="hidden">
-                <s-clickable href="/features/wishlist" accessibilityLabel="wishlist feature">
-                    <s-image aspectRatio="1/1" objectFit="cover" alt="wishlist feature"
-                        src="/assets/wishlist.jpg"></s-image>
-                </s-clickable>
-                <s-divider></s-divider>
-                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small" alignItems="center">
-                    <s-heading>Wishlist</s-heading>
-                    <s-button variant="secondary" href="/features/wishlist"
-                        accessibilityLabel="Wishlist Feature">
-                        View</s-button>
-                </s-grid>
-            </s-box>
-            <!-- Featured template 2 -->
-            <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
-                background="transparent" overflow="hidden">
-                <s-clickable href="/features/persistent-cart" accessibilityLabel="persistent cart feature">
-                    <s-image aspectRatio="1/1" objectFit="cover" alt="persistent cart feature"
-                        src="/assets/persistent-cart.jpg"></s-image>
-                </s-clickable>
-                <s-divider></s-divider>
-                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small" alignItems="center">
-                    <s-heading>Persistent Cart</s-heading>
-                    <s-stack>
-                        <s-button variant="secondary" href="/features/persistent-cart"
-                            accessibilityLabel="Persistent Cart Feature">
-                            View</s-button>
+        <s-section gap="base">
+            <s-grid gridTemplateColumns="repeat(auto-fit, minmax(155px, 1fr))" gap="base">
+                <!-- Featured template 1 -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    overflow="hidden">
+                    <s-clickable href="/features/wishlist" accessibilityLabel="wishlist feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="wishlist feature"
+                            src="/assets/wishlist.jpg"></s-image>
+                    </s-clickable>
+                    <s-stack gap="base">
+                        <s-badge tone="caution">Shopify Forms, Shopify Flow</s-badge>
+                        <s-divider></s-divider>
                     </s-stack>
-                </s-grid>
-            </s-box>
-            <!-- Featured template 3 -->
-            <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
-                background="transparent" overflow="hidden">
-                <s-clickable href="/puzzles/16-piece" accessibilityLabel="16-pieces puzzle template">
-                    <s-image aspectRatio="1/1" objectFit="cover" alt="16-pieces puzzle template"
-                        src="/assets/loyalty-program.jpg"></s-image>
-                </s-clickable>
-                <s-divider></s-divider>
-                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
-                    alignItems="center">
-                    <s-heading>Loyalty Program</s-heading>
-                    <s-button class="nav-button pointer-events-none" href="/puzzles/16-piece"
-                        accessibilityLabel="View 16-pieces puzzle template">
-                        View
-                    </s-button>
-                </s-grid>
-            </s-box>
-        </s-grid>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
+                        alignItems="center">
+                        <s-heading>Wishlist</s-heading>
+                        <s-button variant="secondary" icon="button" acce href="/features/wishlist"
+                            accessibilityLabel="Wishlist Feature">
+                            View</s-button>
+                    </s-grid>
+
+                </s-box>
+                <!-- Featured template 2 -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    background="transparent" overflow="hidden">
+                    <s-clickable href="/features/persistent-cart" accessibilityLabel="persistent cart feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="persistent cart feature"
+                            src="/assets/persistent-cart.jpg"></s-image>
+                    </s-clickable>
+                    <s-divider></s-divider>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
+                        alignItems="center">
+                        <s-heading>Persistent Cart</s-heading>
+                        <s-stack>
+                            <s-button variant="secondary" href="/features/persistent-cart"
+                                accessibilityLabel="Persistent Cart Feature">
+                                View</s-button>
+                        </s-stack>
+                    </s-grid>
+                </s-box>
+                <!-- Featured template 3 -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    background="transparent" overflow="hidden">
+                    <s-clickable href="/puzzles/16-piece" accessibilityLabel="16-pieces puzzle template">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="16-pieces puzzle template"
+                            src="/assets/loyalty-program.jpg"></s-image>
+                    </s-clickable>
+                    <s-divider></s-divider>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
+                        alignItems="center">
+                        <s-heading>Loyalty Program</s-heading>
+                        <s-button class="nav-button pointer-events-none" href="/puzzles/16-piece"
+                            accessibilityLabel="View 16-pieces puzzle template">
+                            View
+                        </s-button>
+                    </s-grid>
+                </s-box>
+            </s-grid>
+        </s-section>
+
         <!-- === -->
         <!-- News -->
         <!-- === -->

@@ -70,7 +70,7 @@
     // Enable buttons in dashboard
     updateDashboardButtons();
 
-    dashboardButtonsClick();
+    //dashboardButtonsClick();
   });
 
   /* document.getElementById("get--config-host").addEventListener("click", async () => {
