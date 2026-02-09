@@ -136,7 +136,7 @@
         data.metafieldDefinitionCreate.createdDefinition.id;
     });*/
 
-  /*document
+  document
     .getElementById("metafield--get-button")
     .addEventListener("click", async () => {
       // Metafield
@@ -173,7 +173,7 @@
       const { data } = await metafieldRes.json();
       document.getElementById("metafield-get").innerText =
         data.metafieldDefinitions.nodes[0].id;
-    });*/
+    });
 
   /**** Chart.js ****/
   /*const ctx = document.getElementById("myChart");
