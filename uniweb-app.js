@@ -19,7 +19,6 @@
   // Update urls on page load
   function updateURLs() {
     const _allurls = document.querySelectorAll(".nav-button");
-
     _allurls.forEach((doc) => {
       doc.addEventListener("click", async (element) => {
         console.log(doc);
@@ -53,14 +52,13 @@
 
   // Dashboard buttons click event to open urls in tab
   function dashboardButtonsClick() {
-    const documentations = document.querySelectorAll(".nav-button");
-
+    /*const documentations = document.querySelectorAll(".nav-button");
     documentations.forEach((doc) => {
       doc.addEventListener("click", async (element) => {
         const _url = doc.getAttribute("data-url");
-        window.open(_url, "_blank");
+        window.open(_url, "_self");
       });
-    });
+    });*/
   }
 
   /**** Update urls ****/
@@ -71,6 +69,8 @@
     apploaderAnimation();
     // Enable buttons in dashboard
     updateDashboardButtons();
+
+    dashboardButtonsClick();
   });
 
   /* document.getElementById("get--config-host").addEventListener("click", async () => {
