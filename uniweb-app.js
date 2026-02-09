@@ -7,9 +7,8 @@
   //document.getElementById("config--URL").innerText = currentURL;
 
   const params = new URLSearchParams(window.location.search);
-  console.log(params);
   const shopifyKey = params.get("shopify_key");
-  
+
   // Array of JSON urls
   const users = [
     { name: "documentation wishlist", url: "https://uniwebthemes.com/" },
@@ -34,10 +33,11 @@
   if (_meta) {
     _meta.setAttribute("content", shopifyKey);
   }
+  /*
   document
     .getElementById("product--picker")
     .addEventListener("click", async () => {
-      /*const res = await fetch("shopify:admin/api/2025-10/graphql.json", {
+      const res = await fetch("shopify:admin/api/2025-10/graphql.json", {
         method: "POST",
         body: JSON.stringify({
           query: `
@@ -52,7 +52,7 @@
       });
 
       const { data } = await res.json();
-      document.getElementById("product-title").innerText = data.product.title;*/
+      document.getElementById("product-title").innerText = data.product.title;
 
       // Metafield
       const metafieldRes = await fetch(
@@ -83,7 +83,7 @@
       document.getElementById("product-title").innerText =
         data.metafieldDefinitions.nodes[0].name;
     });
-
+*/
   document
     .getElementById("metafield--creator")
     .addEventListener("click", async () => {
@@ -171,7 +171,8 @@
         data.metafieldDefinitions.nodes[0].id;
     });
 
-  const ctx = document.getElementById("myChart");
+  /**** Chart.js ****/
+  /*const ctx = document.getElementById("myChart");
 
   new Chart(ctx, {
     type: "bar",
@@ -192,5 +193,5 @@
         },
       },
     },
-  });
+  });*/
 })();
