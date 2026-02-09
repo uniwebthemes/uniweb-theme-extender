@@ -9,7 +9,7 @@
   const params = new URLSearchParams(window.location.search);
   console.log(params);
   const shopifyKey = params.get("shopify_key");
-  document.getElementById("shopify--key").innerText = shopifyKey;
+  
   // Array of JSON urls
   const users = [
     { name: "documentation wishlist", url: "https://uniwebthemes.com/" },
