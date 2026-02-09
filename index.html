@@ -28,7 +28,7 @@
     <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
         <s-stack gap="base">
             <s-text></s-text>
-            <s-banner heading="Welcome to Uniweb Theme Extender">
+            <s-banner heading="Welcome to Uniweb Theme Extender" tone="info">
                 <s-paragraph>Our theme extender comes with 100s of features you need to run, grow your online
                     store. </s-paragraph>
             </s-banner>
@@ -55,14 +55,12 @@
                         src="/assets/wishlist.jpg"></s-image>
                 </s-clickable>
                 <s-divider></s-divider>
-                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
+                <s-grid gridTemplateColumns="1fr 1fr" background="base" padding="small" gap="small"
                     alignItems="center">
                     <s-heading>Wishlist</s-heading>
-                    <s-button variant="secondary" href="/features/wishlist"
-                        accessibilityLabel="Wishlist Feature">
+                    <s-button variant="secondary" href="/features/wishlist" accessibilityLabel="Wishlist Feature">
                         View</s-button>
                 </s-grid>
-
             </s-box>
             <!-- Featured template 2 -->
             <s-box borderRadius="base" background="transparent" overflow="hidden">
@@ -71,7 +69,7 @@
                         src="/assets/persistent-cart.jpg"></s-image>
                 </s-clickable>
                 <s-divider></s-divider>
-                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
+                <s-grid gridTemplateColumns="1fr 1fr" background="base" padding="small" gap="small"
                     alignItems="center">
                     <s-heading>Persistent Cart</s-heading>
                     <s-stack>
@@ -98,13 +96,10 @@
                 </s-grid>
             </s-box>
         </s-grid>
-        <s-stack direction="inline" alignItems="center" justifyContent="center" paddingBlockStart="base">
-            <s-link href="/puzzles">See all puzzle templates</s-link>
-        </s-stack>
         <!-- === -->
         <!-- News -->
         <!-- === -->
-        <s-section>
+        <s-section gap="base">
             <s-heading>News</s-heading>
             <s-grid gridTemplateColumns="repeat(auto-fit, minmax(240px, 1fr))" gap="base">
                 <!-- News item 1 -->
@@ -147,7 +142,7 @@
 
 
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
-    <script src="uniweb-app.js?v=0.0.42" defer></script>
+    <script src="uniweb-app.js?v=0.0.43" defer></script>
 
 </body>
 
