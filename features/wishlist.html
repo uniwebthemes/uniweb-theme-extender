@@ -12,15 +12,7 @@
 
 <body>
     <s-page heading="Wishlist Feature" title="Wishlist Feature">
-        <s-button slot="primary-action" onclick="shopify.toast.show('Save')">Save</s-button>
-        <s-button slot="secondary-actions" onclick="shopify.toast.show('Close')">Close</s-button>
-        <s-button slot="secondary-actions" commandfor="more-actions-id">More actions</s-button>
-        <s-menu id="more-actions-id">
-            <s-button onclick="shopify.toast.show('Action 1')">Action 1</s-button>
-            <s-button onclick="shopify.toast.show('Action 2')">Action 2</s-button>
-            <s-button onclick="shopify.toast.show('Action 3')">Action 3</s-button>
-        </s-menu>
-        <s-link slot="breadcrumb-actions" href="/">Home</s-link>
+        <a href="shopify://admin/apps/uniweb-theme-extender-app" target="_top">Home page</a>
 
         <s-button data-url="/" class="documentation home" icon="home" variant="primary">Home</s-button>
         <s-button data-url="https://uniwebthemes.com/docs/glorous/index" class="documentation wishlist"
