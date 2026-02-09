@@ -84,7 +84,7 @@
         data.metafieldDefinitions.nodes[0].name;
     });
 */
-  document
+  /*  document
     .getElementById("metafield--creator")
     .addEventListener("click", async () => {
       // Metafield
@@ -130,9 +130,9 @@
       const { data } = await metafieldRes.json();
       document.getElementById("metafield-content").innerText =
         data.metafieldDefinitionCreate.createdDefinition.id;
-    });
+    });*/
 
-  document
+  /*document
     .getElementById("metafield--get-button")
     .addEventListener("click", async () => {
       // Metafield
@@ -169,7 +169,7 @@
       const { data } = await metafieldRes.json();
       document.getElementById("metafield-get").innerText =
         data.metafieldDefinitions.nodes[0].id;
-    });
+    });*/
 
   /**** Chart.js ****/
   /*const ctx = document.getElementById("myChart");

@@ -20,48 +20,28 @@
 </head>
 
 <body>
-    <s-app-nav>
-        <s-link href="/" rel="home">Home</s-link>
-        <s-link href="https://uniwebthemes.github.io/uniweb-theme-extender/templates">Templates</s-link>
-        <s-link href="https://uniwebthemes.github.io/uniweb-theme-extender/settings">Settings</s-link>
-    </s-app-nav>
-    <s-page heading="Uniweb Theme Extender Pack">
+    <s-page heading="Uniweb Theme Extender">
         <s-stack gap="base">
             <s-text></s-text>
-            <s-banner heading="Welcome to Uniweb Theme Extender Pack">
+            <s-banner heading="Welcome to Uniweb Theme Extender">
                 <s-paragraph>Our theme extender comes with 100s of features you need to run, grow your online
                     store. </s-paragraph>
             </s-banner>
             <s-text></s-text>
             <s-text></s-text>
-            <s-box padding="base" background="subdued" border="base" borderRadius="base">
+            <!--<s-box padding="base" background="subdued" border="base" borderRadius="base">
                 <s-heading id="metafield-content">Metafield</s-heading>
                 <s-button id="metafield--creator" variant="primary">Create Metafield</s-button>
             </s-box>
             <s-box padding="base" background="subdued" border="base" borderRadius="base">
                 <s-heading id="metafield-get">Get Metafield</s-heading>
                 <s-button id="metafield--get-button" variant="primary">Get Metafield</s-button>
-            </s-box>
+            </s-box>-->
         </s-stack>
-
-
-        <s-button slot="primary-action">Create puzzle</s-button>
-        <s-button slot="secondary-actions">Browse templates</s-button>
-        <s-button slot="secondary-actions">Import image</s-button>
-        <!-- === -->
-        <!-- Banner -->
-        <!-- Use banners sparingly. Only one banner should be visible at a time. -->
-        <!-- If dismissed, use local storage or a database entry to avoid showing this section again to the same user. -->
-        <!-- === -->
-        <s-banner id="upgrade-banner" dismissible onDismiss="window.puzzleApp.dismissBanner(this)">
-            3 of 5 puzzles created.
-            <s-link href="#">Upgrade to Puzzlify Pro</s-link> to create unlimited puzzles.
-        </s-banner>
+        
         <!-- === -->
         <!-- Features -->
         <!-- === -->
-        <s-section>
-            <s-heading>Features</s-heading>
             <s-grid gridTemplateColumns="repeat(auto-fit, minmax(155px, 1fr))" gap="base">
                 <!-- Featured template 1 -->
                 <s-box border="base" borderRadius="base" overflow="hidden">
@@ -112,7 +92,6 @@
             <s-stack direction="inline" alignItems="center" justifyContent="center" paddingBlockStart="base">
                 <s-link href="/puzzles">See all puzzle templates</s-link>
             </s-stack>
-        </s-section>
         <!-- === -->
         <!-- News -->
         <!-- === -->
@@ -159,7 +138,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="uniweb-app.js?v=0.0.28" defer></script>
+    <script src="uniweb-app.js?v=0.0.29" defer></script>
 
 </body>
 
