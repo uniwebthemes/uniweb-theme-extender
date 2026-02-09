@@ -16,14 +16,6 @@
     { name: "Charlie", url: "" },
   ];
 
-  const documentations = document.querySelectorAll(".nav-button");
-
-  documentations.forEach((doc) => {
-    doc.addEventListener("click", async (element) => {
-      const _url = doc.getAttribute("data-url");
-      window.open(_url, "_blank");
-    });
-  });
   // Update urls on page load
   function updateURLs() {
     const _allurls = document.querySelectorAll(".nav-button");
@@ -50,12 +42,35 @@
       appContent.classList.remove("hidden");
     }
   }
+
+  // Enable buttons in dashboard
+  function updateDashboardButtons() {
+    const dashboardButtons = document.querySelectorAll(".nav-button");
+    dashboardButtons.forEach((button) => {
+      button.classList.remove("pointer-events-none");
+    });
+  }
+
+  // Dashboard buttons click event to open urls in tab
+  function dashboardButtonsClick() {
+    const documentations = document.querySelectorAll(".nav-button");
+
+    documentations.forEach((doc) => {
+      doc.addEventListener("click", async (element) => {
+        const _url = doc.getAttribute("data-url");
+        window.open(_url, "_blank");
+      });
+    });
+  }
+
   /**** Update urls ****/
   document.addEventListener("DOMContentLoaded", (event) => {
     // Update urls on page load
     updateURLs();
     // Hide App loader and show app content
     apploaderAnimation();
+    // Enable buttons in dashboard
+    updateDashboardButtons();
   });
 
   /* document.getElementById("get--config-host").addEventListener("click", async () => {
