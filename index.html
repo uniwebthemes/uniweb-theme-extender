@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Uniweb Theme Extender</title>
     <meta name="shopify-api-key" content="" />
-    <link rel="stylesheet" href="uniweb-app.css?v=0.0.04">
+    <link rel="stylesheet" href="uniweb-app.css?v=0.0.05">
     <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
     <script src="https://cdn.shopify.com/shopifycloud/polaris.js"></script>
     <script>
@@ -19,13 +19,14 @@
 </head>
 
 <body>
-    <s-page heading="Uniweb Theme Extender">
-        <s-stack id="app-loader" alignItems="center" gap="base" padding="large">
+    <s-page id="app-loader" heading="Uniweb Theme Extender">
+        <s-stack alignItems="center" gap="base" padding="large">
             <s-spinner accessibilityLabel="Loading products" size="large"></s-spinner>
             <s-text>Loading app...</s-text>
         </s-stack>
-
-        <s-stack id="app-content" class="hidden" gap="base">
+    </s-page>
+    <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
+        <s-stack gap="base">
             <s-text></s-text>
             <s-banner heading="Welcome to Uniweb Theme Extender">
                 <s-paragraph>Our theme extender comes with 100s of features you need to run, grow your online
@@ -52,15 +53,17 @@
                 <s-clickable href="/features/wishlist" accessibilityLabel="wishlist feature">
                     <s-image aspectRatio="1/1" objectFit="cover" alt="wishlist feature"
                         src="/assets/wishlist.jpg"></s-image>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
+                        alignItems="center">
+                        <s-heading>Wishlist</s-heading>
+                        <s-button icon="button" variant="secondary" href="/features/wishlist"
+                            accessibilityLabel="Wishlist Feature">
+                            View</s-button>
+                    </s-grid>
                 </s-clickable>
                 <s-divider></s-divider>
 
-                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
-                    alignItems="center">
-                    <s-heading>Wishlist</s-heading>
-                    <s-button icon="button" variant="secondary" href="/features/wishlist" accessibilityLabel="Wishlist Feature">
-                        View</s-button>
-                </s-grid>
+
             </s-box>
             <!-- Featured template 2 -->
             <s-box borderRadius="base" background="transparent" overflow="hidden">
@@ -73,7 +76,8 @@
                     alignItems="center">
                     <s-heading>Persistent Cart</s-heading>
                     <s-stack>
-                        <s-button icon="button" variant="secondary" href="/features/persistent-cart" accessibilityLabel="Persistent Cart Feature">
+                        <s-button icon="button" variant="secondary" href="/features/persistent-cart"
+                            accessibilityLabel="Persistent Cart Feature">
                             View</s-button>
                     </s-stack>
                 </s-grid>
@@ -144,7 +148,7 @@
 
 
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
-    <script src="uniweb-app.js?v=0.0.39" defer></script>
+    <script src="uniweb-app.js?v=0.0.40" defer></script>
 
 </body>
 
