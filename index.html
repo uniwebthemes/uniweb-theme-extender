@@ -49,38 +49,42 @@
         <!-- === -->
         <s-grid gridTemplateColumns="repeat(auto-fit, minmax(155px, 1fr))" gap="base">
             <!-- Featured template 1 -->
-            <s-box borderRadius="base" overflow="hidden">
+            <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                overflow="hidden">
                 <s-clickable href="/features/wishlist" accessibilityLabel="wishlist feature">
                     <s-image aspectRatio="1/1" objectFit="cover" alt="wishlist feature"
                         src="/assets/wishlist.jpg"></s-image>
                 </s-clickable>
                 <s-divider></s-divider>
-                <s-grid gridTemplateColumns="1fr 1fr" background="base" padding="small" gap="small"
+                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
                     alignItems="center">
                     <s-heading>Wishlist</s-heading>
-                    <s-button variant="secondary" href="/features/wishlist" accessibilityLabel="Wishlist Feature">
-                        View</s-button>
+                    <s-button class="nav-button pointer-events-none" href="/features/wishlist"
+                        accessibilityLabel="View wishlist feature">
+                        View
+                    </s-button>
                 </s-grid>
             </s-box>
             <!-- Featured template 2 -->
-            <s-box borderRadius="base" background="transparent" overflow="hidden">
+            <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                background="transparent" overflow="hidden">
                 <s-clickable href="/features/persistent-cart" accessibilityLabel="persistent cart feature">
                     <s-image aspectRatio="1/1" objectFit="cover" alt="persistent cart feature"
                         src="/assets/persistent-cart.jpg"></s-image>
                 </s-clickable>
                 <s-divider></s-divider>
-                <s-grid gridTemplateColumns="1fr 1fr" background="base" padding="small" gap="small"
+                <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
                     alignItems="center">
                     <s-heading>Persistent Cart</s-heading>
-                    <s-stack>
-                        <s-button variant="secondary" href="/features/persistent-cart"
-                            accessibilityLabel="Persistent Cart Feature">
-                            View</s-button>
-                    </s-stack>
+                    <s-button class="nav-button pointer-events-none" href="/features/persistent-cart"
+                        accessibilityLabel="View persistent cart feature">
+                        View
+                    </s-button>
                 </s-grid>
             </s-box>
             <!-- Featured template 3 -->
-            <s-box borderRadius="base" background="transparent" overflow="hidden">
+            <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                background="transparent" overflow="hidden">
                 <s-clickable href="/puzzles/16-piece" accessibilityLabel="16-pieces puzzle template">
                     <s-image aspectRatio="1/1" objectFit="cover" alt="16-pieces puzzle template"
                         src="/assets/loyalty-program.jpg"></s-image>
@@ -142,7 +146,7 @@
 
 
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
-    <script src="uniweb-app.js?v=0.0.43" defer></script>
+    <script src="uniweb-app.js?v=0.0.44" defer></script>
 
 </body>
 
