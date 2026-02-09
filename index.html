@@ -19,14 +19,13 @@
 </head>
 
 <body>
-    <s-page id="app-loader" heading="Uniweb Theme Extender">
-        <s-stack alignItems="center" gap="base" padding="large">
+    <s-page class="hidden" heading="Uniweb Theme Extender">
+        <s-stack id="app-loader" alignItems="center" gap="base" padding="large">
             <s-spinner accessibilityLabel="Loading products" size="large"></s-spinner>
             <s-text>Loading app...</s-text>
         </s-stack>
-    </s-page>
-    <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
-        <s-stack gap="base">
+
+        <s-stack id="app-content" gap="base">
             <s-text></s-text>
             <s-banner heading="Welcome to Uniweb Theme Extender">
                 <s-paragraph>Our theme extender comes with 100s of features you need to run, grow your online
@@ -49,7 +48,7 @@
         <!-- === -->
         <s-grid gridTemplateColumns="repeat(auto-fit, minmax(155px, 1fr))" gap="base">
             <!-- Featured template 1 -->
-            <s-box border="base" borderRadius="base" overflow="hidden">
+            <s-box borderRadius="base" overflow="hidden">
                 <s-clickable href="/features/wishlist" accessibilityLabel="wishlist feature">
                     <s-image aspectRatio="1/1" objectFit="cover" alt="wishlist feature"
                         src="/assets/wishlist.jpg"></s-image>
@@ -59,14 +58,12 @@
                 <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
                     alignItems="center">
                     <s-heading>Wishlist</s-heading>
-                    <s-stack>
-                        <s-button icon="button" variant="secondary" href="/features/wishlist">
-                            View</s-button>
-                    </s-stack>
+                    <s-button icon="button" variant="secondary" href="/features/wishlist">
+                        View</s-button>
                 </s-grid>
             </s-box>
             <!-- Featured template 2 -->
-            <s-box border="base" borderRadius="base" background="transparent" overflow="hidden">
+            <s-box borderRadius="base" background="transparent" overflow="hidden">
                 <s-clickable href="/features/persistent-cart" accessibilityLabel="persistent cart feature">
                     <s-image aspectRatio="1/1" objectFit="cover" alt="persistent cart feature"
                         src="/assets/persistent-cart.jpg"></s-image>
@@ -82,7 +79,7 @@
                 </s-grid>
             </s-box>
             <!-- Featured template 3 -->
-            <s-box border="base" borderRadius="base" background="transparent" overflow="hidden">
+            <s-box borderRadius="base" background="transparent" overflow="hidden">
                 <s-clickable href="/puzzles/16-piece" accessibilityLabel="16-pieces puzzle template">
                     <s-image aspectRatio="1/1" objectFit="cover" alt="16-pieces puzzle template"
                         src="/assets/loyalty-program.jpg"></s-image>
