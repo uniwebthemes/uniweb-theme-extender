@@ -24,10 +24,10 @@
       window.open(_url, "_blank");
     });
   });*/
-  document.getElementById("get--config-host").addEventListener("click", async () => {
+ /* document.getElementById("get--config-host").addEventListener("click", async () => {
     const configDetailsShop = await shopify.config.host;
     document.getElementById("config--host").innerText = configDetailsShop;
-  });
+  });*/
   /*document.getElementById("get--config-shop").addEventListener("click", async () => {
     const configDetailsShop = await shopify.config.shop;
     document.getElementById("config--shop").innerText = configDetailsShop;
