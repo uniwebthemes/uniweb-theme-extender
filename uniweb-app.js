@@ -18,12 +18,12 @@
 
   const documentations = document.querySelectorAll(".documentation");
 
-  /*documentations.forEach((doc) => {
+  documentations.forEach((doc) => {
     doc.addEventListener("click", async (element) => {
       const _url = doc.getAttribute("data-url");
       window.open(_url, "_blank");
     });
-  });*/
+  });
  /* document.getElementById("get--config-host").addEventListener("click", async () => {
     const configDetailsShop = await shopify.config.host;
     document.getElementById("config--host").innerText = configDetailsShop;

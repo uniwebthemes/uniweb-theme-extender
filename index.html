@@ -10,11 +10,18 @@
     <script src="https://cdn.shopify.com/shopifycloud/polaris.js"></script>
     <script>
         const url = new URL(window.location.href);
-        console.log(Date.now());
         if (!url.searchParams.has("v")) {
             url.searchParams.set("v", Date.now());
             window.location.replace(url);
         }
+        const _allurls = document.querySelectorAll(".documentation");
+        _allurls.forEach((doc) => {
+            doc.addEventListener("click", async (element) => {
+                const _url = doc.getAttribute("data-url");
+                let _newurl = _url + "?v=" + Date.now();
+                doc.setAttribute("data-url", _newurl);
+            });
+        });
     </script>
 
 </head>
@@ -138,7 +145,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="uniweb-app.js?v=0.0.30" defer></script>
+    <script src="uniweb-app.js?v=0.0.31" defer></script>
 
 </body>
 
