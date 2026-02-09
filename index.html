@@ -26,40 +26,18 @@
         </s-stack>
     </s-page>
     <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
-        <s-stack gap="base">
-            <s-text></s-text>
-            <!--<s-banner heading="Welcome to Uniweb Theme Extender" tone="info">
-                <s-paragraph>Our theme extender comes with 100s of features you need to run, grow your online
-                    store. </s-paragraph>
-            </s-banner>-->
-            <s-text></s-text>
-            <s-text></s-text>
-            <!--<s-box padding="base" background="subdued" border="base" borderRadius="base">
-                <s-heading id="metafield-content">Metafield</s-heading>
-                <s-button id="metafield--creator" variant="primary">Create Metafield</s-button>
-            </s-box>
-            <s-box padding="base" background="subdued" border="base" borderRadius="base">
-                <s-heading id="metafield-get">Get Metafield</s-heading>
-                <s-button id="metafield--get-button" variant="primary">Get Metafield</s-button>
-            </s-box>-->
-        </s-stack>
-
         <!-- === -->
         <!-- Features -->
         <!-- === -->
         <s-section gap="base">
-            <s-grid gridTemplateColumns="repeat(auto-fit, minmax(155px, 1fr))" gap="base">
-                <!-- Featured template 1 -->
+            <s-grid gridTemplateColumns="1fr 1fr 1fr" gap="base" padding="small">
+                <!-- Wishlist -->
                 <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
                     overflow="hidden">
                     <s-clickable href="/features/wishlist" accessibilityLabel="wishlist feature">
                         <s-image aspectRatio="1/1" objectFit="cover" alt="wishlist feature"
                             src="/assets/wishlist.jpg"></s-image>
-                    </s-clickable>
-                    <s-stack gap="base">
-                        <s-badge tone="caution">Shopify Forms, Shopify Flow</s-badge>
-                        <s-divider></s-divider>
-                    </s-stack>
+                    </s-clickable>                    
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
                         alignItems="center">
                         <s-heading>Wishlist</s-heading>
@@ -69,7 +47,7 @@
                     </s-grid>
 
                 </s-box>
-                <!-- Featured template 2 -->
+                <!-- Persistent Cart -->
                 <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
                     background="transparent" overflow="hidden">
                     <s-clickable href="/features/persistent-cart" accessibilityLabel="persistent cart feature">
@@ -81,13 +59,13 @@
                         alignItems="center">
                         <s-heading>Persistent Cart</s-heading>
                         <s-stack>
-                            <s-button variant="secondary" href="/features/persistent-cart"
+                            <s-button variant="secondary" icon="button" href="/features/persistent-cart"
                                 accessibilityLabel="Persistent Cart Feature">
                                 View</s-button>
                         </s-stack>
                     </s-grid>
                 </s-box>
-                <!-- Featured template 3 -->
+                <!-- Loyalty -->
                 <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
                     background="transparent" overflow="hidden">
                     <s-clickable href="/puzzles/16-piece" accessibilityLabel="16-pieces puzzle template">
@@ -98,11 +76,46 @@
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
                         alignItems="center">
                         <s-heading>Loyalty Program</s-heading>
-                        <s-button class="nav-button pointer-events-none" href="/puzzles/16-piece"
+                        <s-button icon="button" href="/puzzles/16-piece"
                             accessibilityLabel="View 16-pieces puzzle template">
                             View
                         </s-button>
                     </s-grid>
+                </s-box>
+            </s-grid>
+            <s-grid gridTemplateColumns="1fr 1fr 1fr" gap="base" padding="small">
+                <!-- Product Recommendations -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    overflow="hidden">
+                    <s-clickable href="/features/product-recommendations"
+                        accessibilityLabel="product recommendations feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="product recommendations feature"
+                            src="/assets/product-recommendations.jpg"></s-image>
+                    </s-clickable>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
+                        alignItems="center">
+                        <s-heading>Product Recommendations</s-heading>
+                        <s-button variant="secondary" icon="button" acce href="/features/product-recommendations"
+                            accessibilityLabel="Product Recommendations Feature">
+                            View</s-button>
+                    </s-grid>
+
+                </s-box>
+                <!-- Quantity Breaks -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    overflow="hidden">
+                    <s-clickable href="/features/quantity-breaks" accessibilityLabel="quantity breaks feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="quantity breaks feature"
+                            src="/assets/quantity-breaks.jpg"></s-image>
+                    </s-clickable>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
+                        alignItems="center">
+                        <s-heading>Quantity Breaks</s-heading>
+                        <s-button variant="secondary" icon="button" acce href="/features/quantity-breaks"
+                            accessibilityLabel="Quantity Breaks Feature">
+                            View</s-button>
+                    </s-grid>
+
                 </s-box>
             </s-grid>
         </s-section>
@@ -153,7 +166,7 @@
 
 
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
-    <script src="uniweb-app.js?v=0.0.44" defer></script>
+    <script src="uniweb-app.js?v=0.0.45" defer></script>
 
 </body>
 
