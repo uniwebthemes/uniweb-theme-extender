@@ -19,120 +19,14 @@
 </head>
 
 <body>
-    <s-page heading="Uniweb Theme Extender">
-        <s-stack gap="base">
-            <s-text></s-text>
-            <s-banner heading="Welcome to Uniweb Theme Extender">
-                <s-paragraph>Our theme extender comes with 100s of features you need to run, grow your online
-                    store. </s-paragraph>
-            </s-banner>
-            <s-text></s-text>
-            <s-text></s-text>
-            <!--<s-box padding="base" background="subdued" border="base" borderRadius="base">
-                <s-heading id="metafield-content">Metafield</s-heading>
-                <s-button id="metafield--creator" variant="primary">Create Metafield</s-button>
-            </s-box>
-            <s-box padding="base" background="subdued" border="base" borderRadius="base">
-                <s-heading id="metafield-get">Get Metafield</s-heading>
-                <s-button id="metafield--get-button" variant="primary">Get Metafield</s-button>
-            </s-box>-->
+    <s-page id="app-loader" heading="Uniweb Theme Extender">
+        <s-stack alignItems="center" gap="base" padding="large">
+            <s-spinner accessibilityLabel="Loading products" size="large"></s-spinner>
+            <s-text>Loading app...</s-text>
         </s-stack>
-        
-        <!-- === -->
-        <!-- Features -->
-        <!-- === -->
-            <s-grid gridTemplateColumns="repeat(auto-fit, minmax(155px, 1fr))" gap="base">
-                <!-- Featured template 1 -->
-                <s-box border="base" borderRadius="base" overflow="hidden">
-                    <s-clickable href="/features/wishlist" accessibilityLabel="4-pieces puzzle template">
-                        <s-image aspectRatio="1/1" objectFit="cover" alt="4-pieces puzzle template"
-                            src="/assets/wishlist.jpg"></s-image>
-                    </s-clickable>
-                    <s-divider></s-divider>
-                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
-                        alignItems="center">
-                        <s-heading>Wishlist</s-heading>
-                        <s-button class="nav-button" href="/features/wishlist" accessibilityLabel="View 4-pieces puzzle template">
-                            View
-                        </s-button>
-                    </s-grid>
-                </s-box>
-                <!-- Featured template 2 -->
-                <s-box border="base" borderRadius="base" background="transparent" overflow="hidden">
-                    <s-clickable href="/features/persistent-cart" accessibilityLabel="9-pieces puzzle template">
-                        <s-image aspectRatio="1/1" objectFit="cover" alt="9-pieces puzzle template"
-                            src="/assets/persistent-cart.jpg"></s-image>
-                    </s-clickable>
-                    <s-divider></s-divider>
-                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
-                        alignItems="center">
-                        <s-heading>Persistent Cart</s-heading>
-                        <s-button class="nav-button" href="/features/persistent-cart" accessibilityLabel="View 9-pieces puzzle template">
-                            View
-                        </s-button>
-                    </s-grid>
-                </s-box>
-                <!-- Featured template 3 -->
-                <s-box border="base" borderRadius="base" background="transparent" overflow="hidden">
-                    <s-clickable href="/puzzles/16-piece" accessibilityLabel="16-pieces puzzle template">
-                        <s-image aspectRatio="1/1" objectFit="cover" alt="16-pieces puzzle template"
-                            src="/assets/loyalty-program.jpg"></s-image>
-                    </s-clickable>
-                    <s-divider></s-divider>
-                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
-                        alignItems="center">
-                        <s-heading>Loyalty Program</s-heading>
-                        <s-button href="/puzzles/16-piece" accessibilityLabel="View 16-pieces puzzle template">
-                            View
-                        </s-button>
-                    </s-grid>
-                </s-box>
-            </s-grid>
-            <s-stack direction="inline" alignItems="center" justifyContent="center" paddingBlockStart="base">
-                <s-link href="/puzzles">See all puzzle templates</s-link>
-            </s-stack>
-        <!-- === -->
-        <!-- News -->
-        <!-- === -->
-        <s-section>
-            <s-heading>News</s-heading>
-            <s-grid gridTemplateColumns="repeat(auto-fit, minmax(240px, 1fr))" gap="base">
-                <!-- News item 1 -->
-                <s-grid background="base" border="base" borderRadius="base" padding="base" gap="small-400">
-                    <s-text>Jan 21, 2025</s-text>
-                    <s-link href="/news/new-shapes-and-themes">
-                        <s-heading>New puzzle shapes and themes added</s-heading>
-                    </s-link>
-                    <s-paragraph>
-                        We've added 5 new puzzle piece shapes and 3 seasonal themes to help you create more
-                        engaging and unique puzzles for your customers.
-                    </s-paragraph>
-                </s-grid>
-                <!-- News item 2 -->
-                <s-grid background="base" border="base" borderRadius="base" padding="base" gap="small-400">
-                    <s-text>Nov 6, 2024</s-text>
-                    <s-link href="/news/puzzle-difficulty-customization">
-                        <s-heading>Puzzle difficulty customization features</s-heading>
-                    </s-link>
-                    <s-paragraph>
-                        Now you can fine-tune the difficulty of your puzzles with new rotation controls, edge
-                        highlighting options, and piece recognition settings.
-                    </s-paragraph>
-                </s-grid>
-            </s-grid>
-            <s-stack direction="inline" alignItems="center" justifyContent="center" paddingBlockStart="base">
-                <s-link href="/news">See all news items</s-link>
-            </s-stack>
-        </s-section>
-        <s-stack alignItems="center">
-            <s-text></s-text>
-            <s-text></s-text>
-            <s-text></s-text>
-            <s-text></s-text>
-
-            <s-text>Need help? Visit our <s-link href="https://uniwebthemes.github.io/uniweb-theme-extender/support"
-                    target="_blank">Support Center</s-link>.</s-text>
-        </s-stack>
+    </s-page>
+    <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
+        <img src="../assets/404.svg" alt="Icon">
     </s-page>
 
 
