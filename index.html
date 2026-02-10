@@ -6,9 +6,12 @@
     <title>Uniweb Theme Extender</title>
     <meta name="shopify-api-key" content="" />
     <link rel="stylesheet" href="uniweb-app.css?v=0.0.05">
+    <script type="module">
+        import "https://unpkg.com/@shopify/polaris-icons/dist/index.js";
+    </script>
     <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
     <script src="https://cdn.shopify.com/shopifycloud/polaris.js"></script>
-   <script defer>
+    <script defer>
         const url = new URL(window.location.href);
         if (!url.searchParams.has("v")) {
             url.searchParams.set("v", Date.now());
@@ -51,7 +54,7 @@
                     <s-clickable href="/features/wishlist" accessibilityLabel="wishlist feature">
                         <s-image aspectRatio="1/1" objectFit="cover" alt="wishlist feature"
                             src="/assets/wishlist.jpg"></s-image>
-                    </s-clickable>                    
+                    </s-clickable>
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
                         alignItems="center">
                         <s-heading>Wishlist</s-heading>
@@ -181,7 +184,7 @@
 
 
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
-    <script src="uniweb-app.js?v=0.0.53" defer></script>
+    <script src="uniweb-app.js?v=0.0.54" defer></script>
 
 </body>
 
