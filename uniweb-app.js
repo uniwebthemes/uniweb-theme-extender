@@ -9,7 +9,9 @@
   const params = new URLSearchParams(window.location.search);
   const shopifyKey = params.get("shopify_key");
   const shopifyApi = shopify.config.apiKey;
-  document.getElementById("shopify-api-key").innerText = shopifyApi;
+  document
+    .querySelector('meta[name="shopify-api-key"]')
+    .setAttribute("content", shopifyApi);
 
   // Update urls on page load
   function updateURLs() {
