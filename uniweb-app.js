@@ -8,7 +8,8 @@
 
   const params = new URLSearchParams(window.location.search);
   const shopifyKey = params.get("shopify_key");
-  console.log(params);
+  const shopifyApi = shopify.config.apiKey;
+  document.getElementById("shopify-api-key").innerText = shopifyApi;
 
   // Update urls on page load
   function updateURLs() {
