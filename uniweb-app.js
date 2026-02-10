@@ -9,6 +9,7 @@
   const params = new URLSearchParams(window.location.search);
   const shopifyKey = params.get("shopify_key");
   const shopifyApi = shopify.config.apiKey;
+  console.log("Shopify API Key from config: ", shopifyApi);
   document
     .querySelector('meta[name="shopify-api-key"]')
     .setAttribute("content", shopifyApi);
