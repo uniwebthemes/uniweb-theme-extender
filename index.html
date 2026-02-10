@@ -22,12 +22,10 @@
 </head>
 
 <body>
-    <s-page id="app-loader" heading="Uniweb loading">
-        <s-stack alignItems="center" gap="base" padding="large">
-            <s-spinner accessibilityLabel="Loading products" size="large"></s-spinner>
-            <s-text>Loading app...</s-text>
-        </s-stack>
-    </s-page>
+    <s-stack id="app-loader" alignItems="center" gap="base" padding="large">
+        <s-spinner accessibilityLabel="Loading products" size="large"></s-spinner>
+        <s-text>Loading app...</s-text>
+    </s-stack>
     <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
         <s-section gap="base">
             <s-heading>Welcome to Uniweb Theme Extender</s-heading>
@@ -58,8 +56,10 @@
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
                         alignItems="center">
                         <s-heading>Wishlist</s-heading>
-                        <s-button variant="secondary" icon="button" href="/features/wishlist"
-                            accessibilityLabel="Wishlist Feature">
+                        <s-button variant="secondary" href="/features/wishlist"
+                            accessibilityLabel="View Wishlist Feature">
+                              <s-icon type="alert-circle" tone="warning"></s-icon>
+
                             View</s-button>
                     </s-grid>
 
@@ -77,7 +77,7 @@
                         <s-heading>Persistent Cart</s-heading>
                         <s-stack>
                             <s-button variant="secondary" icon="button" href="/features/persistent-cart"
-                                accessibilityLabel="Persistent Cart Feature">
+                                accessibilityLabel="View Persistent Cart Feature">
                                 View</s-button>
                         </s-stack>
                     </s-grid>
@@ -95,7 +95,7 @@
                         <s-heading>Loyalty Program</s-heading>
                         <s-stack>
                             <s-button variant="secondary" icon="button" href="/index-old"
-                                accessibilityLabel="Loyalty Program Feature">
+                                accessibilityLabel="View Loyalty Program Feature">
                                 View</s-button>
                         </s-stack>
                     </s-grid>
@@ -181,10 +181,8 @@
                     target="_blank">Support Center</s-link>.</s-text>
         </s-stack>
     </s-page>
-
-
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
-    <script src="uniweb-app.js?v=0.0.56" defer></script>
+    <script src="uniweb-app.js?v=0.0.57" defer></script>
 
 </body>
 
