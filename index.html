@@ -82,18 +82,19 @@
                 <!-- Loyalty -->
                 <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
                     background="transparent" overflow="hidden">
-                    <s-clickable href="/puzzles/16-piece" accessibilityLabel="16-pieces puzzle template">
-                        <s-image aspectRatio="1/1" objectFit="cover" alt="16-pieces puzzle template"
-                            src="/assets/loyalty-program.jpg"></s-image>
+                    <s-clickable href="/features/loyalty" accessibilityLabel="persistent cart feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="persistent cart feature"
+                            src="/assets/persistent-cart.jpg"></s-image>
                     </s-clickable>
                     <s-divider></s-divider>
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
                         alignItems="center">
                         <s-heading>Loyalty Program</s-heading>
-                        <s-button icon="button" href="/puzzles/16-piece"
-                            accessibilityLabel="View 16-pieces puzzle template">
-                            View
-                        </s-button>
+                        <s-stack>
+                            <s-button variant="secondary" icon="button" href="/features/loyalty"
+                                accessibilityLabel="Loyalty Program Feature">
+                                View</s-button>
+                        </s-stack>
                     </s-grid>
                 </s-box>
             </s-grid>
@@ -180,7 +181,7 @@
 
 
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
-    <script src="uniweb-app.js?v=0.0.47" defer></script>
+    <script src="uniweb-app.js?v=0.0.48" defer></script>
 
 </body>
 

@@ -8,13 +8,7 @@
 
   const params = new URLSearchParams(window.location.search);
   const shopifyKey = params.get("shopify_key");
-  console.log(currentURL);
-  // Array of JSON urls
-  const users = [
-    { name: "documentation wishlist", url: "https://uniwebthemes.com/" },
-    { name: "Bob", url: "" },
-    { name: "Charlie", url: "" },
-  ];
+  console.log(params);
 
   // Update urls on page load
   function updateURLs() {
