@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Uniweb Theme Extender</title>
+    <meta name="shopify-api-key" content="" />
+    <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
+    <script src="https://cdn.shopify.com/shopifycloud/polaris.js"></script>
+    <script>
+        const url = new URL(window.location.href);
+        if (!url.searchParams.has("v")) {
+            url.searchParams.set("v", Date.now());
+            window.location.replace(url);
+        }
+        const shopifyApi = shopify.config.apiKey;
+        document
+            .querySelector('meta[name="shopify-api-key"]')
+            .setAttribute("content", shopifyApi);      
+    </script>
+    <link rel="stylesheet" href="uniweb-app.css?v=0.0.05">
+</head>
+
+<body>
+    <s-stack id="app-loader" alignItems="center" gap="base" padding="large">
+        <s-spinner accessibilityLabel="Loading products" size="large"></s-spinner>
+        <s-text>Loading app...</s-text>
+    </s-stack>
+    <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
+        <s-section gap="base">
+            <s-heading>Welcome to Uniweb Theme Extender</s-heading>
+            <s-paragraph>
+                Uniweb Theme Extender is a powerful tool that allows you to easily add new features and
+                functionalities to your Shopify store's theme without needing to write any code. With our
+                intuitive interface and seamless integration, you can enhance your store's capabilities and
+                create a more engaging shopping experience for your customers.
+            </s-paragraph>
+            <s-paragraph>
+                Whether you want to add a wishlist, implement a loyalty program, or create personalized product
+                recommendations, Uniweb Theme Extender has got you covered. Explore our features and see how
+                you can take your store to the next level!
+            </s-paragraph>
+        </s-section>
+        <!-- === -->
+        <!-- Features -->
+        <!-- === -->
+        <s-section gap="base">
+            <s-grid gridTemplateColumns="1fr 1fr 1fr" gap="base" padding="small">
+                <!-- Wishlist -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    overflow="hidden">
+                    <s-clickable href="/features/wishlist" accessibilityLabel="wishlist feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="wishlist feature"
+                            src="/assets/wishlist.jpg"></s-image>
+                    </s-clickable>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
+                        alignItems="center">
+                        <s-heading>Wishlist</s-heading>
+                        <s-button variant="secondary" href="/features/wishlist"
+                            accessibilityLabel="View Wishlist Feature">
+                              <s-icon type="alert-circle" tone="warning"></s-icon>
+
+                            View</s-button>
+                    </s-grid>
+
+                </s-box>
+                <!-- Persistent Cart -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    background="transparent" overflow="hidden">
+                    <s-clickable href="/features/persistent-cart" accessibilityLabel="persistent cart feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="persistent cart feature"
+                            src="/assets/persistent-cart.jpg"></s-image>
+                    </s-clickable>
+                    <s-divider></s-divider>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
+                        alignItems="center">
+                        <s-heading>Persistent Cart</s-heading>
+                        <s-stack>
+                            <s-button variant="secondary" icon="button" href="/features/persistent-cart"
+                                accessibilityLabel="View Persistent Cart Feature">
+                                View</s-button>
+                        </s-stack>
+                    </s-grid>
+                </s-box>
+                <!-- Loyalty -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    background="transparent" overflow="hidden">
+                    <s-clickable href="/index-old" accessibilityLabel="persistent cart feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="persistent cart feature"
+                            src="/assets/persistent-cart.jpg"></s-image>
+                    </s-clickable>
+                    <s-divider></s-divider>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="small" gap="small"
+                        alignItems="center">
+                        <s-heading>Loyalty Program</s-heading>
+                        <s-stack>
+                            <s-button variant="secondary" icon="button" href="/index-old"
+                                accessibilityLabel="View Loyalty Program Feature">
+                                View</s-button>
+                        </s-stack>
+                    </s-grid>
+                </s-box>
+            </s-grid>
+            <s-grid gridTemplateColumns="1fr 1fr 1fr" gap="base" padding="small">
+                <!-- Product Recommendations -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    overflow="hidden">
+                    <s-clickable href="/features/product-recommendations"
+                        accessibilityLabel="product recommendations feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="product recommendations feature"
+                            src="/assets/product-recommendations.jpg"></s-image>
+                    </s-clickable>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
+                        alignItems="center">
+                        <s-heading>Product Recommendations</s-heading>
+                        <s-button variant="secondary" icon="button" href="/features/product-recommendations"
+                            accessibilityLabel="Product Recommendations Feature">
+                            View</s-button>
+                    </s-grid>
+
+                </s-box>
+                <!-- Quantity Breaks -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    overflow="hidden">
+                    <s-clickable href="/features/quantity-breaks" accessibilityLabel="quantity breaks feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="quantity breaks feature"
+                            src="/assets/quantity-breaks.jpg"></s-image>
+                    </s-clickable>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
+                        alignItems="center">
+                        <s-heading>Quantity Breaks</s-heading>
+                        <s-button variant="secondary" icon="button" href="/features/quantity-breaks"
+                            accessibilityLabel="Quantity Breaks Feature">
+                            View</s-button>
+                    </s-grid>
+
+                </s-box>
+            </s-grid>
+        </s-section>
+
+        <!-- === -->
+        <!-- News -->
+        <!-- === -->
+        <s-section gap="base">
+            <s-heading>News</s-heading>
+            <s-grid gridTemplateColumns="repeat(auto-fit, minmax(240px, 1fr))" gap="base">
+                <!-- News item 1 -->
+                <s-grid background="base" border="base" borderRadius="base" padding="base" gap="small-400">
+                    <s-text>Jan 21, 2025</s-text>
+                    <s-link href="/news/new-shapes-and-themes">
+                        <s-heading>New puzzle shapes and themes added</s-heading>
+                    </s-link>
+                    <s-paragraph>
+                        We've added 5 new puzzle piece shapes and 3 seasonal themes to help you create more
+                        engaging and unique puzzles for your customers.
+                    </s-paragraph>
+                </s-grid>
+                <!-- News item 2 -->
+                <s-grid background="base" border="base" borderRadius="base" padding="base" gap="small-400">
+                    <s-text>Nov 6, 2024</s-text>
+                    <s-link href="/news/puzzle-difficulty-customization">
+                        <s-heading>Puzzle difficulty customization features</s-heading>
+                    </s-link>
+                    <s-paragraph>
+                        Now you can fine-tune the difficulty of your puzzles with new rotation controls, edge
+                        highlighting options, and piece recognition settings.
+                    </s-paragraph>
+                </s-grid>
+            </s-grid>
+            <s-stack direction="inline" alignItems="center" justifyContent="center" paddingBlockStart="base">
+                <s-link href="/news">See all news items</s-link>
+            </s-stack>
+        </s-section>
+        <s-stack alignItems="center">
+            <s-text></s-text>
+            <s-text></s-text>
+            <s-text></s-text>
+            <s-text></s-text>
+
+            <s-text>Need help? Visit our <s-link href="https://uniwebthemes.github.io/uniweb-theme-extender/support"
+                    target="_blank">Support Center</s-link>.</s-text>
+        </s-stack>
+    </s-page>
+    <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
+    <script src="uniweb-app.js?v=0.0.58" defer></script>
+
+</body>
+
+</html>
