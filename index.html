@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="uniweb-app.css?v=0.0.05">
     <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
     <script src="https://cdn.shopify.com/shopifycloud/polaris.js"></script>
-    <script>
+    <script defer>
         const url = new URL(window.location.href);
         if (!url.searchParams.has("v")) {
             url.searchParams.set("v", Date.now());
