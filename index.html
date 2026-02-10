@@ -28,11 +28,6 @@
         <s-text>Loading app...</s-text>
     </s-stack>
     <s-page id="app-content" heading="Uniweb Theme Extender">
-        <s-app-nav>
-            <s-link href="/" rel="home">Home</s-link>
-            <s-link href="/templates">Templates</s-link>
-            <s-link href="/settings">Settings</s-link>
-        </s-app-nav>
         <s-section gap="base">
             <s-heading>Welcome to Uniweb Theme Extender</s-heading>
             <s-paragraph>
@@ -46,14 +41,6 @@
                 recommendations, Uniweb Theme Extender has got you covered. Explore our features and see how
                 you can take your store to the next level!
             </s-paragraph>
-        </s-section>
-        <s-section gap="base">
-            <s-stack direction="inline" gap="base">
-                <s-icon type="home"></s-icon>
-                <s-icon type="order"></s-icon>
-                <s-icon type="product"></s-icon>
-                <s-icon type="settings"></s-icon>
-            </s-stack>
         </s-section>
         <!-- === -->
         <!-- Features -->
@@ -71,7 +58,7 @@
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
                         alignItems="center">
                         <s-heading>Wishlist</s-heading>
-                        <s-button variant="secondary" href="/features/wishlist"
+                        <s-button variant="primary" href="/features/wishlist"
                             accessibilityLabel="View Wishlist Feature">
                             View</s-button>
                     </s-grid>
@@ -89,7 +76,7 @@
                         alignItems="center">
                         <s-heading>Persistent Cart</s-heading>
                         <s-stack>
-                            <s-button variant="secondary" href="/features/persistent-cart"
+                            <s-button variant="primary" href="/features/persistent-cart"
                                 accessibilityLabel="View Persistent Cart Feature">
                                 View</s-button>
                         </s-stack>
@@ -107,7 +94,7 @@
                         alignItems="center">
                         <s-heading>Loyalty Program</s-heading>
                         <s-stack>
-                            <s-button variant="secondary" href="/index-old"
+                            <s-button variant="primary" href="/index-old"
                                 accessibilityLabel="View Loyalty Program Feature">
                                 View</s-button>
                         </s-stack>
@@ -126,7 +113,7 @@
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
                         alignItems="center">
                         <s-heading>Product Recommendations</s-heading>
-                        <s-button variant="secondary" href="/features/product-recommendations"
+                        <s-button variant="primary" href="/features/product-recommendations"
                             accessibilityLabel="View Product Recommendations Feature">
                             View</s-button>
                     </s-grid>
@@ -142,7 +129,7 @@
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
                         alignItems="center">
                         <s-heading>Quantity Breaks</s-heading>
-                        <s-button variant="secondary" href="/features/quantity-breaks"
+                        <s-button variant="primary" href="/features/quantity-breaks"
                             accessibilityLabel="View Quantity Breaks Feature">
                             View</s-button>
                     </s-grid>
@@ -195,7 +182,7 @@
         </s-stack>
     </s-page>
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
-    <script src="uniweb-app.js?v=0.0.63" defer></script>
+    <script src="uniweb-app.js?v=0.0.64" defer></script>
 </body>
 
 </html>
