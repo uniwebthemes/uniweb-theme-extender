@@ -2,7 +2,10 @@
     display: none;
     transition: opacity 0.5s ease-in-out;
 }
-
+.blurred {
+    filter: blur(5px);
+    transition: filter 0.5s ease-in-out;
+}
 .show {
     display: contents;
     transition: opacity 0.5s ease-in-out;

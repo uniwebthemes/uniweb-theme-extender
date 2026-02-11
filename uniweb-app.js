@@ -9,8 +9,8 @@
   const params = new URLSearchParams(window.location.search);
   const shopifyKey = params.get("shopify_key");
   document
-            .querySelector('meta[name="shopify-api-key"]')
-            .setAttribute("content", shopifyKey);    
+    .querySelector('meta[name="shopify-api-key"]')
+    .setAttribute("content", shopifyKey);
 
   // Update urls on page load
   function updateURLs() {
@@ -32,7 +32,7 @@
     const appContent = document.getElementById("app-content");
     if (appLoader && appContent) {
       appLoader.classList.add("hidden");
-      appContent.classList.remove("hidden");
+     appContent.classList.remove("hidden");
     }
   }
 

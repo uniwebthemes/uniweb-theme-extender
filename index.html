@@ -23,11 +23,14 @@
 </head>
 
 <body>
-    <s-stack id="app-loader" alignItems="center" gap="base" padding="large">
-        <s-spinner accessibilityLabel="Loading products" size="large"></s-spinner>
-        <s-text>Loading app...</s-text>
-    </s-stack>
-    <s-page id="app-content" heading="Uniweb Theme Extender">
+    <s-page id="app-loader" heading="Uniweb Theme Loader">
+        <s-stack alignItems="center" gap="base" padding="large">
+            <s-spinner accessibilityLabel="Loading products" size="large"></s-spinner>
+            <s-text>Loading app...</s-text>
+        </s-stack>
+    </s-page>
+
+    <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
         <s-section gap="base">
             <s-heading>Welcome to Uniweb Theme Extender</s-heading>
             <s-paragraph>
@@ -135,6 +138,23 @@
                     </s-grid>
 
                 </s-box>
+                <!-- Upsells & Crosssells -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    overflow="hidden">
+                    <s-clickable href="/features/upsells-crosssells"
+                        accessibilityLabel="upsells and crosssells feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="upsells and crosssells feature"
+                            src="/assets/upsells-crosssells.jpg"></s-image>
+                    </s-clickable>
+                    <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
+                        alignItems="center">
+                        <s-heading>Upsells & crosssells</s-heading>
+                        <s-button variant="primary" href="/features/upsells-crosssells"
+                            accessibilityLabel="View Upsells & crosssells Feature">
+                            View</s-button>
+                    </s-grid>
+
+                </s-box>
             </s-grid>
         </s-section>
 
@@ -182,7 +202,7 @@
         </s-stack>
     </s-page>
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
-    <script src="uniweb-app.js?v=0.0.64" defer></script>
+    <script src="uniweb-app.js?v=0.0.65" defer></script>
 </body>
 
 </html>
