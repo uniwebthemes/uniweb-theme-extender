@@ -50,6 +50,7 @@
         <!-- === -->
         <s-section gap="base">
             <s-grid gridTemplateColumns="1fr 1fr 1fr" gap="base" padding="small">
+
                 <!-- Wishlist -->
                 <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
                     overflow="hidden">
@@ -57,6 +58,10 @@
                         <s-image aspectRatio="1/1" objectFit="cover" alt="wishlist feature"
                             src="/assets/wishlist.jpg"></s-image>
                     </s-clickable>
+                    <s-grid gridTemplateColumns="1fr" placeContent="center center" background="base" padding="base"
+                        gap="base">
+                        <s-badge tone="success" size="base">Saves $60 / year on apps</s-badge>
+                    </s-grid>
                     <s-divider></s-divider>
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
                         alignItems="center">
@@ -65,7 +70,6 @@
                             accessibilityLabel="View Wishlist Feature">
                             View</s-button>
                     </s-grid>
-
                 </s-box>
                 <!-- Persistent Cart -->
                 <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
@@ -113,9 +117,14 @@
                         <s-image aspectRatio="1/1" objectFit="cover" alt="product recommendations feature"
                             src="/assets/product-recommendations.jpg"></s-image>
                     </s-clickable>
+                    <s-divider></s-divider>
+                     <s-grid gridTemplateColumns="1fr" placeContent="center center" background="base" padding="base"
+                        gap="base">
+                        <s-badge tone="success" size="base">Saves $300 / year on apps</s-badge>
+                    </s-grid>
                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
                         alignItems="center">
-                        <s-heading>Product Recommendations</s-heading>
+                        <s-heading>AI Recommendations</s-heading>
                         <s-button variant="primary" href="/features/product-recommendations"
                             accessibilityLabel="View Product Recommendations Feature">
                             View</s-button>
@@ -154,6 +163,28 @@
                             View</s-button>
                     </s-grid>
 
+                </s-box>
+            </s-grid>
+            <s-grid gridTemplateColumns="1fr 1fr 1fr" gap="base" padding="base">
+                <!-- Flow Templates -->
+                <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
+                    overflow="hidden">
+                    <s-clickable href="/features/flow-templates" accessibilityLabel="flow templates feature">
+                        <s-image aspectRatio="1/1" objectFit="cover" alt="flow templates feature"
+                            src="/assets/flow-templates.jpg"></s-image>
+                    </s-clickable>
+                    <s-grid gridTemplateColumns="1fr" placeContent="center center" background="base" padding="base"
+                        gap="base">
+                        <s-badge tone="caution" size="base">Saves 1000's of hours / year time</s-badge>
+                    </s-grid>
+                    <s-divider></s-divider>
+                     <s-grid gridTemplateColumns="1fr auto" background="base" padding="base" gap="small"
+                        alignItems="center">
+                        <s-heading>Flow Templates</s-heading>
+                        <s-button variant="primary" href="/features/flow-templates"
+                            accessibilityLabel="View Flow Templates Feature">
+                            View</s-button>
+                    </s-grid>
                 </s-box>
             </s-grid>
         </s-section>

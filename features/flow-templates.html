@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Flow Templates - Uniweb Theme Extender</title>
+    <meta name="shopify-api-key" content="" />
+    <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
+    <script src="https://cdn.shopify.com/shopifycloud/polaris.js"></script>
+    <script>
+        const url = new URL(window.location.href);
+        if (!url.searchParams.has("v")) {
+            url.searchParams.set("v", Date.now());
+            window.location.replace(url);
+        }
+        const shopifyApi = shopify.config.apiKey;
+        document
+            .querySelector('meta[name="shopify-api-key"]')
+            .setAttribute("content", shopifyApi);      
+    </script>
+    <link rel="stylesheet" href="../uniweb-app.css?v=0.0.05">
+</head>
+
+<body>
+    <s-page heading="Flow Templates Feature" title="Flow Templates Feature">
+        <s-grid gap="small">
+            <s-heading>Flow Templates Feature</s-heading>
+            <s-button variant="primary" href="/" accessibilityLabel="Go home">
+                Go Home</s-button>
+            <s-section padding="small">
+                <s-box>
+                    <s-section>
+                        <s-switch label="Enable feature"
+                            details="Ensure all criteria are met before enabling"></s-switch>
+                    </s-section>
+                </s-box>
+            </s-section>
+            <s-banner heading="Wishlist feature requires following apps to work properly:" status="warning">
+                <s-stack direction="inline" gap="large-100">
+                    <s-badge tone="warning">Shopify Forms</s-badge>
+                    <s-badge tone="warning">Shopify Flow</s-badge>
+                </s-stack>
+            </s-banner>
+        </s-grid>
+        <s-text>Need help? Visit our <s-link href="https://uniwebthemes.github.io/uniweb-theme-extender/support"
+                target="_blank">Support Center</s-link>.</s-text>
+    </s-page>
+    <script src="../uniweb-app.js?v=0.0.65" defer></script>
+
+</body>
+
+</html>
