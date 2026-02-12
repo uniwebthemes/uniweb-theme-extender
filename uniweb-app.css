@@ -21,6 +21,10 @@
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
+.app--icon {
+    width: 50px;
+    height: 50px;
+}
 
 s-section {
     padding: 20px;
