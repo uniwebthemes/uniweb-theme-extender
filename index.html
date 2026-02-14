@@ -251,9 +251,11 @@
         (async function () {
 
             const params = new URLSearchParams(window.location.search);
+            consoe.log(params);
             const shopifyKey = params.get("shopify_key");
             const shop = params.get("shop");
             const host = params.get("host");
+            console.log(shopifyKey, shop, host);
 
             const loading = document.getElementById("app-loader");
             const blocked = document.getElementById("blocked");
