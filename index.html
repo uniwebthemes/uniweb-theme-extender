@@ -28,6 +28,7 @@
          document
              .querySelector('meta[name="shopify-api-key"]')
              .setAttribute("content", shopifyApi);   */
+
     </script>
     <link rel="stylesheet" href="uniweb-app.css?v=0.0.05">
 </head>
@@ -39,7 +40,11 @@
             <s-text>Loading app...</s-text>
         </s-stack>
     </s-page>
-
+    <!-- Unauthorized Screen -->
+    <s-stack id="blocked" class="center hidden" alignItems="center" gap="base" padding="large">
+        <s-heading>Access Denied</s-heading>
+        <s-paragraph>This app can only be opened from Shopify Admin.</s-paragraph>
+    </s-stack>
     <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
         <s-section gap="base">
             <s-heading>Welcome to Uniweb Theme Extender</s-heading>
@@ -243,6 +248,81 @@
         </s-stack>
     </s-page>
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>-->
+    <script>
+        (async function () {
+
+            const params = new URLSearchParams(window.location.search);
+            const shopifyKey = params.get("shopify_key");
+            const shop = params.get("shop");
+            const host = params.get("host");
+
+            const loading = document.getElementById("app-loader");
+            const blocked = document.getElementById("app-content");
+            const appContainer = document.getElementById("app");
+
+            // Must have required Shopify params
+            if (!shop || !host) {
+                blockAccess();
+                return;
+            }
+
+            // Must be inside iframe
+            if (window.top === window.self) {
+                blockAccess();
+                return;
+            }
+
+            try {
+                const AppBridge = window["app-bridge"];
+                const createApp = AppBridge.default;
+
+                const app = createApp({
+                    apiKey: shopifyKey,
+                    host: host,
+                    forceRedirect: true
+                });
+
+                const utils = window["app-bridge-utils"];
+                const token = await utils.getSessionToken(app);
+
+                const payload = parseJwt(token);
+
+                // Basic validation
+                if (
+                    payload.iss !== "https://shopify.com" ||
+                    !payload.dest.includes(".myshopify.com")
+                ) {
+                    blockAccess();
+                    return;
+                }
+
+                // Success
+                showApp(payload.dest);
+
+            } catch (error) {
+                console.error(error);
+                blockAccess();
+            }
+
+            function blockAccess() {
+                loading.classList.add("hidden");
+                blocked.classList.remove("hidden");
+            }
+
+            function showApp(shopUrl) {
+                loading.classList.add("hidden");
+                appContainer.classList.remove("hidden");
+                document.getElementById("shop-name").innerText = shopUrl;
+            }
+
+            function parseJwt(token) {
+                const base64 = token.split('.')[1];
+                const json = atob(base64);
+                return JSON.parse(json);
+            }
+
+        })();
+    </script>
     <script src="uniweb-app.js?v=0.0.65" defer></script>
 </body>
 
