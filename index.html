@@ -274,7 +274,7 @@
             try {
                 const AppBridge = window["app-bridge"];
                 const createApp = AppBridge.default;
-
+                console.log(host);
                 const app = createApp({
                     apiKey: shopifyKey,
                     host: host,
