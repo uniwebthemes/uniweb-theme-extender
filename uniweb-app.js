@@ -31,6 +31,7 @@
     const appLoader = document.getElementById("app-loader");
     const appContent = document.getElementById("app-content");
     const appContents = document.querySelectorAll(".app-content");
+    console.log(appContents);
     if (appLoader && appContent) {
       appLoader.classList.add("hidden");
       //appContent.classList.remove("hidden");
