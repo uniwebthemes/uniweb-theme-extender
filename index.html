@@ -44,12 +44,15 @@
         <s-heading>Access Denied</s-heading>
         <s-paragraph>This app can only be opened from Shopify Admin.</s-paragraph>
     </s-stack>
-    <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
+    <s-page id="app-content" class="hidden" inline-size="large" heading="Uniweb Theme Extender">
         <s-app-nav>
             <s-link href="/" rel="home">Home</s-link>
             <s-link href="/templates">Templates</s-link>
             <s-link href="/settings">Settings</s-link>
         </s-app-nav>
+        <s-button slot="primary-action" onclick="shopify.toast.show('Save')">Save</s-button>
+        <s-button slot="secondary-actions" onclick="shopify.toast.show('Close')">Close</s-button>
+        <s-button slot="secondary-actions" onclick="shopify.toast.show('Cancel')">Cancel</s-button>
         <s-section gap="base">
             <s-heading>Welcome to Uniweb Theme Extender</s-heading>
             <s-paragraph>
@@ -72,7 +75,6 @@
         <!-- === -->
         <s-section gap="base">
             <s-grid gridTemplateColumns="1fr 1fr 1fr" gap="base" padding="small">
-
                 <!-- Wishlist -->
                 <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
                     overflow="hidden">
