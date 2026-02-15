@@ -37,8 +37,7 @@
     </s-app-nav>
 </head>
 
-<body>
-    
+<body>    
     <s-page id="app-loader" heading="Uniweb Theme Loader">
         <s-stack alignItems="center" gap="base" padding="large">
             <s-spinner accessibilityLabel="Loading products" size="large"></s-spinner>
@@ -46,7 +45,7 @@
         </s-stack>
     </s-page>
     <!-- Unauthorized Screen -->
-    <s-stack id="blocked" class="center hidden" alignItems="center" gap="base" padding="large">
+    <s-stack id="blocked" class="unauthorized center hidden" alignItems="center" gap="base" padding="large">
         <s-heading>Access Denied</s-heading>
         <s-paragraph>This app can only be opened from Shopify Admin.</s-paragraph>
     </s-stack>
@@ -331,7 +330,7 @@
         })();
     </script>-->
 
-    <script src="uniweb-app.js?v=0.0.65" defer></script>
+    <script src="uniweb-app.js?v=0.0.66" defer></script>
 </body>
 
 </html>
