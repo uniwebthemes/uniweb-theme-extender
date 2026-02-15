@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="uniweb-app.css?v=0.0.05">
 </head>
 
-<body>    
+<body>
     <s-page id="app-loader" heading="Uniweb Theme Loader">
         <s-stack alignItems="center" gap="base" padding="large">
             <s-spinner accessibilityLabel="Loading products" size="large"></s-spinner>
@@ -58,6 +58,9 @@
                 recommendations, Uniweb Theme Extender has got you covered. Explore our features and see how
                 you can take your store to the next level!
             </s-paragraph>
+            <s-app-window id="app-window" src="/features/wishlist"></s-app-window>
+
+            <s-button command="--show" commandFor="app-window">Open App Window</s-button>
         </s-section>
         <!-- === -->
         <!-- Features -->
