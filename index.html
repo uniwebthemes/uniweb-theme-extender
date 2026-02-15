@@ -33,23 +33,6 @@
 </head>
 
 <body>
-    <ui-nav-menu><template shadowrootmode="open">
-            <style>
-                :host {
-                    display: none;
-                }
-            </style>
-            <slot></slot>
-        </template>
-        <a href="/" rel="home">Home</a>
-        <a href="/templates">Theme Templates</a>
-        <a href="/settings">Theme Settings</a>
-    </ui-nav-menu>
-    <s-app-nav>
-        <s-link href="/" rel="home">Home</s-link>
-        <s-link href="/templates">Templates</s-link>
-        <s-link href="/settings">Settings</s-link>
-    </s-app-nav>
     <s-page id="app-loader" heading="Uniweb Theme Loader">
         <s-stack alignItems="center" gap="base" padding="large">
             <s-spinner accessibilityLabel="Loading products" size="large"></s-spinner>
@@ -62,6 +45,11 @@
         <s-paragraph>This app can only be opened from Shopify Admin.</s-paragraph>
     </s-stack>
     <s-page id="app-content" class="hidden" heading="Uniweb Theme Extender">
+        <s-app-nav>
+            <s-link href="/" rel="home">Home</s-link>
+            <s-link href="/templates">Templates</s-link>
+            <s-link href="/settings">Settings</s-link>
+        </s-app-nav>
         <s-section gap="base">
             <s-heading>Welcome to Uniweb Theme Extender</s-heading>
             <s-paragraph>
