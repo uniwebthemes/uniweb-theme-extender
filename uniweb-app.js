@@ -30,9 +30,13 @@
   function apploaderAnimation() {
     const appLoader = document.getElementById("app-loader");
     const appContent = document.getElementById("app-content");
+    const appContents = document.querySelectorAll(".app-content");
     if (appLoader && appContent) {
       appLoader.classList.add("hidden");
-     appContent.classList.remove("hidden");
+      //appContent.classList.remove("hidden");
+      appContents.forEach((content) => {
+        content.classList.remove("hidden");
+      });
     }
   }
 

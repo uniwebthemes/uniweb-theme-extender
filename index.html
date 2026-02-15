@@ -54,8 +54,7 @@
             <s-button slot="secondary-actions" onclick="shopify.toast.show('Cancel')">Cancel</s-button>
         </s-stack>
 
-        <s-stack id="app-content" class="hidden">
-            <s-section gap="base">
+            <s-section class="app-content hidden" gap="base">
                 <s-heading>Welcome to Uniweb Theme Extender</s-heading>
                 <s-paragraph>
                     Uniweb Theme Extender is a powerful tool that allows you to easily add new features and
@@ -75,7 +74,7 @@
             <!-- === -->
             <!-- Features -->
             <!-- === -->
-            <s-section gap="base">
+            <s-section class="app-content hidden" gap="base">
                 <s-grid gridTemplateColumns="1fr 1fr 1fr" gap="base" padding="small">
                     <!-- Wishlist -->
                     <s-box padding="base" background="base" borderWidth="base" borderColor="base" borderRadius="base"
@@ -218,7 +217,7 @@
             <!-- === -->
             <!-- News -->
             <!-- === -->
-            <s-section gap="base">
+            <s-section class="app-content hidden" gap="base">
                 <s-heading>News</s-heading>
                 <s-grid gridTemplateColumns="repeat(auto-fit, minmax(240px, 1fr))" gap="base">
                     <!-- News item 1 -->
@@ -248,7 +247,6 @@
                     <s-link href="/news">See all news items</s-link>
                 </s-stack>
             </s-section>
-        </s-stack>
         <s-stack alignItems="center">
             <s-text></s-text>
             <s-text></s-text>
@@ -259,6 +257,7 @@
                     target="_blank">Support Center</s-link>.</s-text>
         </s-stack>
     </s-page>
+    <script src="uniweb-app.js?v=0.0.67" defer></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <script>
         (async function () {
@@ -338,7 +337,7 @@
         })();
     </script>-->
 
-    <script src="uniweb-app.js?v=0.0.66" defer></script>
+    
 </body>
 
 </html>
